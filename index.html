@@ -646,18 +646,16 @@
   </div>
 
   <div class="btn-text-center mt-8">
-      <a href="events.html" class="col-md-4 col-lg-4 reason font-semibold py-2 px-4 rounded hover:bg-white hover:text-orange-500 transition duration-300">
-          Explore Other Events
-      </a>
-  </div>
-</section>
-  
+    <a href="events.html" class="bg-orange-300 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition duration-300 transform hover:bg-orange-400 hover:scale-105">
+        Explore Other Events
+    </a>
+</div>
 <script>
   // GSAP animation
   gsap.registerPlugin(ScrollTrigger);
 
-  // Selects all cards
-  const cards = document.querySelectorAll('.card');
+  // Selects all event cards
+  const cards = document.querySelectorAll('.bg-white');
 
   // Animate cards on scroll
   cards.forEach(card => {
