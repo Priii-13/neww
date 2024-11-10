@@ -10,7 +10,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background-color: rgb(10, 10, 33);
         }
 
         /* Container for the page content */
@@ -115,7 +115,7 @@
 
         <!-- Sidebar with Filter -->
         <div class="sidebar">
-            <div class="filter">
+            <div class="filter"><h1>Filters</h1>
                 <label for="eventType">Filter by Event Type</label>
                 <select id="eventType">
                     <option value="all">All Events</option>
@@ -125,55 +125,30 @@
                     <option value="alumni">Alumni Meetup</option>
                 </select>
             </div>
-        </div>
-
-        <!-- Event Cards -->
-        <div class="event-cards">
-            <div id="ongoingEvents">
-                <div class="section-title">Ongoing Events</div>
-                <div class="event-status">Currently happening</div>
-                <div class="event-card" data-type="educational">
-                    <img src="assets/educational-event.jpg" alt="Event Image">
-                    <div class="card-content">
-                        <h3>Workshop on Cybersecurity</h3>
-                        <p>Learn the basics of cybersecurity and how to protect your data.</p>
-                        <div class="date-time">Date: Nov 9, 2024 | Time: 3:00 PM</div>
-                    </div>
-                </div>
-                <div class="event-card" data-type="sports">
-                    <img src="assets/sports-event.jpg" alt="Event Image">
-                    <div class="card-content">
-                        <h3>Basketball Tournament</h3>
-                        <p>Join the fun and compete in a friendly basketball match.</p>
-                        <div class="date-time">Date: Nov 9, 2024 | Time: 4:00 PM</div>
-                    </div>
-                </div>
+            <div class="filter">
+                <label for="eventPrice">Filter by Price</label>
+                <select id="eventPrice">
+                    <option value="all">All Prices</option>
+                    <option value="free">Free</option>
+                    <option value="paid">Paid</option>
+                </select>
             </div>
-
-            <div id="upcomingEvents">
-                <div class="section-title">Upcoming Events</div>
-                <div class="event-status">Scheduled soon</div>
-                <div class="event-card" data-type="cultural">
-                    <img src="assets/Cultural.png" alt="Event Image">
-                    <div class="card-content">
-                        <h3>Traditional Dance Performance</h3>
-                        <p>Experience the richness of Indian traditional dance.</p>
-                        <div class="date-time">Date: Nov 15, 2024 | Time: 6:00 PM</div>
-                    </div>
-                </div>
+            <div class="filter">
+                <label for="eventCity">Filter by City</label>
+                <select id="eventCity">
+                    <option value="all">All Cities</option>
+                    <option value="new-york">Bhopal</option>
+                    <option value="los-angeles">Indore</option>
+                    <option value="chicago">Jabalpur</option>
+                </select>
             </div>
-
-            <div id="closedEvents">
-                <div class="section-title">Closed Events</div>
-                <div class="event-status">Past events</div>
-                <div class="event-card" data-type="alumni">
-                    <img src="assets/Alumuni meetup.jpg" alt="Event Image">
-                    <div class="card-content">
-                        <h3>Alumni Reunion</h3>
-                        <p>A chance for alumni to reconnect and share their experiences.</p>
-                        <div class="date-time">Date: Nov 1, 2024 | Time: 5:00 PM</div>
-                    </div>
-                </div>
+            <div class="filter">
+                <label for="eventCollege">Filter by College</label>
+                <select id="eventCollege">
+                    <option value="all">All Colleges</option>
+                    <option value="uit rgpv">UIT RGPV</option>
+                    <option value="soit rgpv">SOIT RGPV</option>
+                </select>
             </div>
         </div>
     </div>
