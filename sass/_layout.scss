@@ -1,0 +1,189 @@
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.header {
+  padding: 0;
+
+  background-color: white;
+  transition: all 0.5s;
+  //z-index: 997;
+  color: #ffffff !important;
+  //width:100%;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+
+button.navbar-toggler {
+  outline: 0 !important;
+  border-color: none;
+}
+
+.navbar {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+  // background: rgba(0,0,0,.6) !important;
+  &-brand img {
+    height: 2.5rem;
+  }
+}
+
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show > .nav-link {
+  background: #fe8c00;
+  background-image: -webkit-linear-gradient(
+    to right,
+    $primary-color-1,
+    $primary-color-2
+  );
+  background: linear-gradient(to right, $primary-color-1, $primary-color-2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.navbar-nav {
+  .nav-item {
+    padding-right: 0.7rem;
+
+    .nav-link {
+      padding-top: 0.8rem;
+      &:hover {
+        background: #fe8c00;
+        background: -webkit-linear-gradient(
+          to right,
+          $primary-color-1,
+          $primary-color-2
+        );
+        background: linear-gradient(
+          to right,
+          $primary-color-1,
+          $primary-color-2
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    a .nav-link.active {
+      color: $primary-color-1 !important;
+    }
+    .navbar-light .navbar-nav .nav-link {
+      color: #111;
+    }
+    a {
+      display: block;
+      position: relative;
+      color: #111 !important;
+      transition: 0.3s;
+      // font-size: 13px;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-family: "Lato", sans-serif;
+    }
+  }
+}
+
+//landing page
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+//about page
+
+.about {
+  border-radius: 5px;
+  background-color: #1e1e1e;
+  .heading {
+    color: #fff;
+  }
+  h5 {
+    color: #fff;
+  }
+  .jumbotron {
+    //background-color:$light-grey-2;
+    background-color: #1e1e1e;
+
+    color: $black-background-font-color;
+
+    //color:$grey-background-font-color;
+  }
+  img {
+    // border-radius: 5px;
+    box-shadow: 1rem 1rem 0px 0px $primary-color-1;
+  }
+  &-image-row {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    //padding:2rem;
+    color: $black-background-font-color;
+  }
+  .principles {
+    // background-color:rgba($primary-color-1,.9) ;
+    // color:white;
+    padding: 1rem;
+    h5 {
+      color: $primary-color-1;
+    }
+  }
+}
+
+//client section start
+.clients {
+  background-color: $light-grey-3;
+  .jumbotron {
+    background-color: $light-grey-3;
+  }
+}
+//client section end
+
+//about page end
+
+.portfolio {
+  .jumbotron {
+    background-color: #fff;
+  }
+}
+
+//services
+.services {
+  //background-color: #e9ecef;
+  .jumbotron {
+    background-color: #fff;
+  }
+}
+
+//footer
+
+.bottom-footer {
+  background-color: $bottom-footer-background;
+  color: $black-background-font-color;
+}
+
+@media (min-width: 768px) {
+  .carousel-multi-item-2 .col-md-3 {
+    float: left;
+    width: 25%;
+    max-width: 100%;
+  }
+}
+
+.carousel-multi-item-2 .card img {
+  border-radius: 2px;
+}
+
+.whyus {
+  background-color: $light-grey-3;
+  .jumbotron {
+    background-color: $light-grey-3;
+  }
+}
