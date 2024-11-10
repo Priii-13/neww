@@ -612,26 +612,25 @@
 
 
 <!-- Events Section here -->
-<section class="events bg-orange-500" id="events">
-  <div class="jumbotron narrow corporate-events" data-aos="fade-up">
-    <div class="col-12 text-center">
-      <h3 class="heading text-white">UPCOMING EVENTS</h3>
-      <div class="heading-underline"></div>
-    </div>
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Events Section here -->
+<section class="events bg-orange-500 py-12" id="events">
+  <div class="container mx-auto text-center" data-aos="fade-up">
+    <h3 class="heading text-white text-3xl font-bold">UPCOMING EVENTS</h3>
+    <div class="heading-underline mb-8"></div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <!-- Event Card 1 -->
-      <div class="bg-white mt-5 rounded-lg shadow-lg p-6">
+      <div class="bg-white rounded-lg shadow-lg p-6">
           <h3 class="text-xl font-semibold mb-2">Spring Fest 2024</h3>
-          <p class="text-gray-700">Date:  April 10, 2024</p>
+          <p class="text-gray-700">Date: April 10, 2024</p>
           <p class="text-gray-700">Location: College Ground</p>
-          <p class="text-gray-700">Description: Join us for a day of fun, games, and performances at our annual Spring Fest! Enjoy live music, food stalls, and various activities.
-          </p>
+          <p class="text-gray-700">Description: Join us for a day of fun, games, and performances at our annual Spring Fest! Enjoy live music, food stalls, and various activities.</p>
       </div>
 
       <!-- Event Card 2 -->
       <div class="bg-white rounded-lg shadow-lg p-6">
           <h3 class="text-xl font-semibold mb-2">Guest Lecture: Innovations in Technology</h3>
-          <p class="text-gray-700">Date:  October 15, 2024</p>
+          <p class="text-gray-700">Date: October 15, 2024</p>
           <p class="text-gray-700">Location: Auditorium</p>
           <p class="text-gray-700">Description: Attend a guest lecture by renowned tech entrepreneur Jane Doe, who will discuss the latest innovations and trends in technology.</p>
       </div>
@@ -643,21 +642,21 @@
           <p class="text-gray-700">Location: Main Hall</p>
           <p class="text-gray-700">Description: Meet potential employers and explore job opportunities at our annual Career Fair. Bring your resume and be ready to network!</p>
       </div>
-  </div>
+    </div>
 
-  <div class="btn-text-center mt-8">
-      <a href="events.html" class="col-md-4 col-lg-4 reason font-semibold py-2 px-4 rounded hover:bg-white hover:text-orange-500 transition duration-300">
+    <div class="mt-8">
+      <a href="events.html" class="btn btn-outline-light font-semibold py-2 px-4 rounded hover:bg-white hover:text-orange-500 transition duration-300">
           Explore Other Events
       </a>
+    </div>
   </div>
-</section>
   
 <script>
   // GSAP animation
   gsap.registerPlugin(ScrollTrigger);
 
   // Selects all cards
-  const cards = document.querySelectorAll('.card');
+  const cards = document.querySelectorAll('.bg-white');
 
   // Animate cards on scroll
   cards.forEach(card => {
