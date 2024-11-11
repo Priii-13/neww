@@ -626,13 +626,30 @@
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Add a click event for the plus icon to show a notification
     $(document).ready(function () {
-      $('.plus-icon').click(function () {
-        alert('Event added successfully!');
-      });
+        $('.add-event').click(function () {
+            // Gets the event name from the button's data attribute
+            var eventName = $(this).data('event');
+
+            // Gets existing events from local storage or initialize an empty array
+            var events = JSON.parse(localStorage.getItem('events')) || [];
+            
+            // Check if the event already exists
+            if (!events.includes(eventName)) {
+                // Add the new event to the array
+                events.push(eventName);
+                
+                // Save the updated events array back to local storage
+                localStorage.setItem('events', JSON.stringify(events));
+                
+                // Show a notification
+                alert(eventName + ' added successfully!');
+            } else {
+                alert(eventName + ' is already in your events.');
+            }
+        });
     });
-  </script>
+</script>
 
   <script>
     // GSAP animation
