@@ -31,9 +31,6 @@ An Event Management Website designed to help users create, organize, and manage 
 ![Homepage Screenshot](https://github.com/user-attachments/assets/3736ae1a-988a-4ee2-bc22-40e9fac7a520)
 
 
-### Dashboard
-![Dashboard Screenshot](https://via.placeholder.com/800x400?text=Dashboard)
-
 ### Event Details Page
 ![Event Details Screenshot](https://github.com/user-attachments/assets/361970e0-d3a4-4d71-bea0-ea31859670a8)
 
