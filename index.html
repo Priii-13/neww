@@ -623,6 +623,7 @@
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+ 
   <script>
     $(document).ready(function () {
         // Function to update the event collector display
@@ -643,7 +644,8 @@
         // Initial load of events into the collector
         updateEventCollector();
 
-        $('.add-event').click(function () {
+        // Event listener for adding events
+        $(document).on('click', '.add-event', function () {
             // Gets the event name from the button's data attribute
             var eventName = $(this).data('event');
 
@@ -659,7 +661,7 @@
                 localStorage.setItem('events', JSON.stringify(events));
                 
                 // Show a notification
-                alert(eventName + ' added successfully!');
+                alert(eventName + ' has been successfully added to My Events in events.html!');
 
                 // Update the event collector display
                 updateEventCollector();
