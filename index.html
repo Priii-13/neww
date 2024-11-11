@@ -1,276 +1,282 @@
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png" />
-  <link rel="manifest" href="img/favicon_io/site.webmanifest" />
-  <!-- Google Font reference -->
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-  <title>AGRANEE - An Event Management Company</title>
-
-  <!-- Bootstrap CSS  -->
-  <link rel="stylesheet" href="vendor/bootstrap-4.3.1-dist/css/bootstrap.min.css" />
-  <!-- icon library css utilised in topbar -->
-  <link href="vendor/icofont/icofont.min.css" rel="stylesheet" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/favicon_io/site.webmanifest" />
+    <!-- Google Font reference -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <title>AGRANEE - An Event Management Company</title>
+    
+    <!-- Bootstrap CSS  -->
+    <link
+      rel="stylesheet"
+      href="vendor/bootstrap-4.3.1-dist/css/bootstrap.min.css"
+    />
+    <!-- icon library css utilised in topbar -->
+    <link href="vendor/icofont/icofont.min.css" rel="stylesheet" />
 
   <!-- AOS scroll library css -->
   <link href="vendor/aos/aos.css" rel="stylesheet">
 
-  <!-- app specific CSS -->
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-
-<body data-spy="scroll" data-target="#agranee-nav">
-  <!-- Topbar component on Home page start -->
-  <div class="topbar d-lg-flex align-items-center text-center" id="home">
-    <div class="container d-lg-flex align-items-center">
-      <div class="contact-info d-sm-flex flex-sm-column flex-md-row justify-content-center mr-auto">
-        <div class="mr-2">Need Any Help ?</div>
-        <div class="mr-2">
-          <i class="icofont-phone"></i>
-          <a href="#" class="contact-info-phone"> +91 89830 60689 </a>
+     <!-- app specific CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-spy="scroll" data-target="#agranee-nav" >
+    <!-- Topbar component on Home page start -->
+    <div class="topbar d-lg-flex align-items-center text-center" id="home">
+      <div class="container d-lg-flex align-items-center">
+        <div
+          class="contact-info d-sm-flex flex-sm-column flex-md-row justify-content-center mr-auto"
+        >
+          <div class="mr-2">Need Any Help ?</div>
+          <div class="mr-2">
+            <i class="icofont-phone"></i>
+            <a href="#" class="contact-info-phone"> +91 89830 60689 </a>
+          </div>
+          <div class="mr-2">
+            <i class="icofont-envelope"></i>
+            <a href="mailto:contact@example.com" class="contact-info-email pr-3"
+              >contact@example.com</a
+            >
+          </div>
         </div>
-        <div class="mr-2">
-          <i class="icofont-envelope"></i>
-          <a href="mailto:contact@example.com" class="contact-info-email pr-3">contact@example.com</a>
+        <div class="social-links">
+          <span class="followus-text mr-2">Follow Us</span>
+          <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+          <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
+          <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
+          <a href="#" class="skype"><i class="icofont-skype"></i></a>
+          <a href="#" class="linkedin"><i class="icofont-linkedin"></i></a>
         </div>
-      </div>
-      <div class="social-links">
-        <span class="followus-text mr-2">Follow Us</span>
-        <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
-        <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
-        <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
-        <a href="#" class="skype"><i class="icofont-skype"></i></a>
-        <a href="#" class="linkedin"><i class="icofont-linkedin"></i></a>
       </div>
     </div>
-  </div>
-  <!-- Topbar component on Home Page end -->
+    <!-- Topbar component on Home Page end -->
 
-  <!-- Navigation component on header start -->
-  <header class="header sticky-top">
-
-    <nav class="navbar navbar-expand-md navbar-light bg-light ">
-      <a href="index.html" class="navbar-brand">
-        <img src="img/logo.png" alt="" />
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#agranee-nav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="agranee-nav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item ">
-            <a href="#home" class="nav-link">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="#about" class="nav-link">About</a>
-          </li>
-          <li class="nav-item">
-            <a href="#services" class="nav-link">Services</a>
-          </li>
-          <li class="nav-item">
-            <a href="#events" class="nav-link">Events</a>
-          </li>
-          <li class="nav-item">
-            <a href="#whyus" class="nav-link">WHy US</a>
-          </li>
-          <li class="nav-item">
-            <a href="#contact" class="nav-link">Contact</a>
-          </li>
-        </ul>
+    <!-- Navigation component on header start -->
+    <header class="header sticky-top" >
+      
+        <nav class="navbar navbar-expand-md navbar-light bg-light ">
+            <a href="index.html" class="navbar-brand">
+              <img src="img/logo.png"  alt="" />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#agranee-nav"
+            >
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="agranee-nav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                  <a href="#home" class="nav-link"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#events" class="nav-link">Events</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#whyus" class="nav-link">WHy US</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#contact" class="nav-link">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+     
+    </header>
+    <!-- Navigation component on header end -->
+    <!-- Home Page section start -->
+    <section class="home1" id="home1">
+      <div id="hero" class="hero">
+        <div class="text-center hero-text">         
+            <h1>Welcome to event easy</h1>
+           
+            <div class=" text-center p-1" style="color:white"> <h3>We arrange event as you plan</h3></div>
+            
+            <h5 class="hero-text-h2 mb-2">
+              An Event Management firm dealing in branding, BTL activations and
+              events
+            </h5>
+          
+            <a href="#about" class=" btn btn-outline-light btn-lg btn-get-started" 
+              >LEARN MORE</a>          
+          
+              
+          </div>
       </div>
-    </nav>
+ 
+    </section>
+     <!-- section testimonials start -->
+     <section class="testimonials section-bg"  data-aos="fade-up" data-aos-delay="100"  >
+      <div class="jumbotron narrow section-bg">
+          <div class="col-12 text-center">
+              <h3 class="heading">
+                  TESTIMONIAlS
+              </h3>
+              <div class="heading-underline "></div>
+          </div>
+          <div class="row testimonials-row" >
+              <div class="col-md-6">
+                  <div class="row">
+                      <div class="col-md-4">
+                          <img src="img/testimonial/client1.png" alt="" class="testimonials-image">
+                      </div>
+                      <div class="col-md-8">
+                          <blockquote>
+                              <i class="icofont-quote-left"></i>
+                              <p>Thank you so much for the extraordinary work each and every one of you did to manage the planning and execution of our conference with such aplomb. Your work made it possible for the speakers, artists, and audience members to have an incredible, indelible experience. Without your work behind the scenes, this program would not have been possible.
 
-  </header>
-  <!-- Navigation component on header end -->
-  <!-- Home Page section start -->
-  <section class="home1" id="home1">
-    <div id="hero" class="hero">
-      <div class="text-center hero-text">
-        <h1>Welcome to event easy</h1>
+                              </p>
+                              <hr class="testimonials-hr">
+                              <cite><span>&#8212;</span> Eric,Company Name</cite>
+                          </blockquote>
+                      </div>
+                     
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="row">
+                      <div class="col-md-4">
+                          <img src="img/testimonial/client2.png" alt="" class="testimonials-image">
+                      </div>
+                      <div class="col-md-8">
+                          <blockquote>
+                              <i class="icofont-quote-left"></i>
+                              <p> Thank you for the outstanding work of the Event Easy group. We had a wonderful time and could not imagine pulling off our meeting without the guidance of your staff. Simply put, they exceeded all our expectations and could not have been more patient or harder working on the (many) requests we made of them over the past few months. They are an amazing team! 
 
-        <div class=" text-center p-1" style="color:white">
-          <h3>We arrange event as you plan</h3>
-        </div>
-
-        <h5 class="hero-text-h2 mb-2">
-          An Event Management firm dealing in branding, BTL activations and
-          events
-        </h5>
-
-        <a href="#about" class=" btn btn-outline-light btn-lg btn-get-started">LEARN MORE</a>
-
-
+                              </p>
+                              <hr class="testimonials-hr">
+                              <cite>&#8212; Eric,Company Name</cite>
+                          </blockquote>
+                      </div>
+                     
+                  </div>
+              </div>
+          </div>
       </div>
-    </div>
-
   </section>
-  <!-- section testimonials start -->
-  <section class="testimonials section-bg" data-aos="fade-up" data-aos-delay="100">
-    <div class="jumbotron narrow section-bg">
-      <div class="col-12 text-center">
-        <h3 class="heading">
-          TESTIMONIAlS
-        </h3>
-        <div class="heading-underline "></div>
-      </div>
-      <div class="row testimonials-row">
-        <div class="col-md-6">
-          <div class="row">
-            <div class="col-md-4">
-              <img src="img/testimonial/client1.png" alt="" class="testimonials-image">
+ <!-- section testimonials start -->
+      <!--  Client/Brand section start -->
+    <!-- section portfolio start -->
+    <section class="portfolio ">
+        <div class="jumbotron narrow">
+            <div class="col-12 text-center">
+                <h3 class="heading">
+                    Our Work
+                </h3>
+                <div class="heading-underline "></div>
             </div>
-            <div class="col-md-8">
-              <blockquote>
-                <i class="icofont-quote-left"></i>
-                <p>Thank you so much for the extraordinary work each and every one of you did to manage the planning and
-                  execution of our conference with such aplomb. Your work made it possible for the speakers, artists,
-                  and audience members to have an incredible, indelible experience. Without your work behind the scenes,
-                  this program would not have been possible.
+            <div class="row portfolio-row" data-aos="fade-up">
+                <div class="col-lg-12 d-flex justify-content-center" >
+                    <ul id="portfolio-filters">
+                      <!-- <li data-filter="*" class="filter-active" >All</li> -->
 
-                </p>
-                <hr class="testimonials-hr">
-                <cite><span>&#8212;</span> Eric,Company Name</cite>
-              </blockquote>
+                        <li data-filter=".filter-latest" class="filter-active" >Latest</li>
+                        <li data-filter=".filter-branding" >Branding</li>
+                        <li data-filter=".filter-events" >Events</li>
+                        <li data-filter=".filter-promotions" >Promotions</li>
+                        <li data-filter=".filter-designs" >Stall Design and Fabrication</li>
+                       
+                    </ul>
+                </div>
             </div>
-
+            
+            <!--Carousel Wrapper-->
+            <div id="multi-item-portfolio " class="carousel slide carousel-multi-item carousel-multi-item-2" data-ride="carousel">
+                                <!--Controls-->
+                  <div class="controls-top text-center">
+                    <a  href="#multi-item-portfolio" data-slide="prev">
+                      <i class="icofont-caret-left"></i></a>
+                     
+                    <a  href="#multi-item-portfolio" data-slide="next">
+                      <i class="icofont-caret-right"></i></a>
+                  </div>
+            <!--/.Controls-->
+  
+                    <!--Slides-->
+                    <div class=" row portfolio-container carousel-inner  " role="listbox" data-aos="fade-up">
+                        <!-- Here slides are added dynamically from main.js file -->
+                    </div>
+             </div>
+         
+    </section>
+    <!-- section portfolio end -->
+    <section class="about" id="about" >
+      <div class="jumbotron narrow" data-aos="fade-up">
+          <div class="col-12 text-center">
+              <h3 class="heading">About Us</h3>
+              <div class="heading-underline"></div>
           </div>
-        </div>
-        <div class="col-md-6">
-          <div class="row">
-            <div class="col-md-4">
-              <img src="img/testimonial/client2.png" alt="" class="testimonials-image">
-            </div>
-            <div class="col-md-8">
-              <blockquote>
-                <i class="icofont-quote-left"></i>
-                <p> Thank you for the outstanding work of the Event Easy group. We had a wonderful time and could not
-                  imagine pulling off our meeting without the guidance of your staff. Simply put, they exceeded all our
-                  expectations and could not have been more patient or harder working on the (many) requests we made of
-                  them over the past few months. They are an amazing team!
-
-                </p>
-                <hr class="testimonials-hr">
-                <cite>&#8212; Eric,Company Name</cite>
-              </blockquote>
-            </div>
-
+          <div class="row  about-image-row ">
+              <div class="col-md-5 d-flex justify-content-left align-self-center mb-3 pb-4"><img src="img/about.jpg"  alt=""></div>
+              <div class="col-md-7">
+                  <p>
+                      Agranee Events is one of India’s upcoming events firm dealing in
+                      branding, BTL activations and events, with core belief of treating
+                      every project as a special campaign, it is spreading as one of the
+                      most reliable brand building solution providers in the market.
+                  </p>
+                  <p>
+                      We have depth of expertise in branding and activation , boasts of having in its client portfolio more than 50 leading MNCs and corporate houses including Godrej Appliances, Godrej Interio, Godrej Smart Care, Safilo,Epson India, Essilor India Pvt.Ltd,Health & Glow.
+                  </p>
+                
+              </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- section testimonials start -->
-  <!--  Client/Brand section start -->
-  <!-- section portfolio start -->
-  <section class="portfolio ">
-    <div class="jumbotron narrow">
-      <div class="col-12 text-center">
-        <h3 class="heading">
-          Our Work
-        </h3>
-        <div class="heading-underline "></div>
-      </div>
-      <div class="row portfolio-row" data-aos="fade-up">
-        <div class="col-lg-12 d-flex justify-content-center">
-          <ul id="portfolio-filters">
-            <!-- <li data-filter="*" class="filter-active" >All</li> -->
-
-            <li data-filter=".filter-latest" class="filter-active">Latest</li>
-            <li data-filter=".filter-branding">Branding</li>
-            <li data-filter=".filter-events">Events</li>
-            <li data-filter=".filter-promotions">Promotions</li>
-            <li data-filter=".filter-designs">Stall Design and Fabrication</li>
-
-          </ul>
-        </div>
-      </div>
-
-      <!--Carousel Wrapper-->
-      <div id="multi-item-portfolio " class="carousel slide carousel-multi-item carousel-multi-item-2"
-        data-ride="carousel">
-        <!--Controls-->
-        <div class="controls-top text-center">
-          <a href="#multi-item-portfolio" data-slide="prev">
-            <i class="icofont-caret-left"></i></a>
-
-          <a href="#multi-item-portfolio" data-slide="next">
-            <i class="icofont-caret-right"></i></a>
-        </div>
-        <!--/.Controls-->
-
-        <!--Slides-->
-        <div class=" row portfolio-container carousel-inner  " role="listbox" data-aos="fade-up">
-          <!-- Here slides are added dynamically from main.js file -->
-        </div>
-      </div>
-
-  </section>
-  <!-- section portfolio end -->
-  <section class="about" id="about">
-    <div class="jumbotron narrow" data-aos="fade-up">
-      <div class="col-12 text-center">
-        <h3 class="heading">About Us</h3>
-        <div class="heading-underline"></div>
-      </div>
-      <div class="row  about-image-row ">
-        <div class="col-md-5 d-flex justify-content-left align-self-center mb-3 pb-4"><img src="img/about.jpg" alt="">
-        </div>
-        <div class="col-md-7">
-          <p>
-            Agranee Events is one of India’s upcoming events firm dealing in
-            branding, BTL activations and events, with core belief of treating
-            every project as a special campaign, it is spreading as one of the
-            most reliable brand building solution providers in the market.
-          </p>
-          <p>
-            We have depth of expertise in branding and activation , boasts of having in its client portfolio more than
-            50 leading MNCs and corporate houses including Godrej Appliances, Godrej Interio, Godrej Smart Care,
-            Safilo,Epson India, Essilor India Pvt.Ltd,Health & Glow.
-          </p>
-
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-12 mt-4">
-          <p>
-            We were founded in 2009, headquartered in ‘Pune’ has seamlessly worked towards becoming the synonym of
-            client’s delight, With time it has evolved in expanding its reach in execution in major cities a namely;
-            Pune, Mumbai, Surat, Ahmedabad, Indore, Bhopal, Lucknow, Delhi, Chandigarh, Amritsar, Jaipur, Hyderabad,
-            Tirupati, Chennai, Bangalore, Virajpet & Kochi. We now offer services across all Indian cities via reliable
-            associates.
-          </p>
-        </div>
-
-      </div>
-      <div class="row ">
-
-        <div class=" principles text-center d-flex ">
-          <div class="col-md-5">
-            <h5>Values </h5>
-            <p>Right to Equality | Freedom of Expression | Respect | Integrity</p>
+        
+          <div class="row" >
+              <div class="col-md-12 mt-4"><p>
+                  We were founded in 2009, headquartered in ‘Pune’ has seamlessly worked towards becoming the synonym of client’s delight, With time it has evolved in expanding its reach in execution in major cities a namely; Pune, Mumbai, Surat, Ahmedabad, Indore, Bhopal, Lucknow, Delhi, Chandigarh, Amritsar, Jaipur, Hyderabad,  Tirupati, Chennai, Bangalore, Virajpet & Kochi. We now offer services across all Indian cities via reliable associates.
+              </p></div>        
+            
           </div>
-          <div class="col-md-4">
-            <h5>Mission</h5>
-            <p>Offer the best in class customer service at a revolutionary price.</p>
-          </div>
-          <div class="col-md-3">
-            <h5>Vision</h5>
-            <p>&ldquo;Make an Event an Experience&rdquo;</p>
-          </div>
-
+          <div class="row ">
+            
+            <div class=" principles text-center d-flex " >
+                <div class="col-md-5">
+                 <h5>Values </h5><p>Right to Equality | Freedom of Expression | Respect | Integrity</p>
+                </div>
+                <div class="col-md-4">
+                 <h5>Mission</h5><p>Offer the best in class customer service at a revolutionary price.</p>
+                </div>
+                <div class="col-md-3">
+                 <h5>Vision</h5><p>&ldquo;Make an Event an Experience&rdquo;</p>
+                </div>
+                 
+             </div>
+       
         </div>
-
+  
+  
       </div>
-
-
-    </div>
-
+   
   </section>
 
   <!-- Services->corporate events  section start -->
@@ -408,183 +414,158 @@
             EXHIBITION STALL DESIGN & TRADE FAIR</h4>
         </div>
 
-        <div class=" col-sm-12 col-md-5 service-image-left d-flex  justify-content-md-between  mb-4 pt-4"><img
-            src="img/stall_design.jpg" class="img-fluid align-self-center " alt="corporate events"></div>
-
-
-        <div class="col-sm-12 col-md-7  service1-text"><span class="service-numbering-span">03</span>
-
-          <p>
-            Exhibitions are the best way for a brand to give their potential customers a hands on experience and we at
-            ‘Agranee’ do understand that ; with a dedicated team of professionals with expertise and experience we
-            commit to deliver excellence in terms of stall designing & fabrication.
-          </p>
-          <p>
-            We offer an array of design options to the client to choose from.You can trust us as a one stop solution
-            when it comes to exhibition stall design and installation.
-          </p>
-
+            <div class=" col-sm-12 col-md-5 service-image-left d-flex  justify-content-md-between  mb-4 pt-4"><img src="img/stall_design.jpg" class="img-fluid align-self-center " alt="corporate events"></div>
+           
+            
+            <div class="col-sm-12 col-md-7  service1-text"><span class="service-numbering-span">03</span>
+              
+                <p>
+                  Exhibitions are the best way for a brand to give their potential customers a hands on experience and we at ‘Agranee’ do understand that ; with a dedicated team of professionals with expertise and experience we commit to deliver excellence in terms of stall designing & fabrication.                  
+                </p>       
+                <p>
+                  We offer an array of design options to the client to choose from.You can trust us as a one stop solution when it comes to exhibition stall design and installation. 
+                </p>       
+              
+            </div>            
+       
+            <div class=" row d-flex justify-content-center pt-2 pl-3">
+              <div class=" col-12 key-engagements"> What we offer:</div> 
+               <div class=" col-sm-12 col-md-6 col-lg-6  service-item-list">
+                <i class="icofont-check-circled"></i>	Stall Designing
+               </div>
+               <div class=" col-sm-12 col-md-6 col-lg-6 service-item-list">
+                <i class="icofont-check-circled"></i>Fabrication
+               </div>
+               <div class="  col-sm-12 col-md-6 col-lg-6 service-item-list">
+                <i class="icofont-check-circled"></i> 3D designs and installation.
+               </div>
+               <div class="col-sm-12 col-md-6 col-lg-6 service-item-list">
+                <i class="icofont-check-circled"></i> Customized booths.
+               </div>
+               
+              
+            </div>
         </div>
+        
+         
+        <div class="row service-image-row-right mt-4 pt-4 " data-aos="fade-right">            
+           
+          <div class="col-sm-12 col-md-7   service-text"><span class="service-numbering-span">04</span>
+            <h4 class="service-heading">
+              BTL ACTIVATION & BRAND PROMOTION </h4>
+              <blockquote>              
+                    <i class="icofont-quote-left"></i>
+                    The most important thing to remember is you must know your audience – Lewis Howes 
+                <i class="icofont-quote-right"></i>
+             </blockquote>
+              <p>
+                Below the line activation is one of the key operating area of ‘Agranee Events’. Over the time with innovation and customization we have been able to reach the TG with the right approach through a range of multiple activities which suits the ‘TG’ and the brand communication.</p>
+                <p>
 
-        <div class=" row d-flex justify-content-center pt-2 pl-3">
-          <div class=" col-12 key-engagements"> What we offer:</div>
-          <div class=" col-sm-12 col-md-6 col-lg-6  service-item-list">
-            <i class="icofont-check-circled"></i> Stall Designing
+                  We specialize in range of activities which target a huge range of audience; be it Sec A+ or rural/mass activities we engage with the right idea and communication to generate maximum buzz for the brand.              
+                
+                </p> 
+                <p>
+                  We at Agranee treat every campaign specifically irrespective of the duration or the scale of it, our goal is to give optimum results from every project. From pre-hype till post activity reporting we take care of all.
+                </p>             
+            
           </div>
-          <div class=" col-sm-12 col-md-6 col-lg-6 service-item-list">
-            <i class="icofont-check-circled"></i>Fabrication
+          <div class=" col-sm-12 col-md-5 service-image-right d-flex  justify-content-sm-between justify-content-md-around  mb-4"><img src="img/btl&promotions.jpg" class="img-fluid align-self-center "  alt="BRANDING & FABRICATION"></div>
+                  
+          <div class=" row d-flex justify-content-center pt-2 pl-3 "> 
+            <div class="col-12 key-engagements-right"> Range of BTL activities:</div>      
+                
+            
+             <div class=" col-sm-12 col-md-6 col-lg-4 service-item-list ">
+                <i class="icofont-check-circled"></i>Mall Promotions  
+             </div>
+             <div class=" col-sm-12 col-md-6 col-lg-4 service-item-list">
+                <i class="icofont-check-circled"></i> Road Shows
+             </div>
+             <div class="  col-sm-12 col-md-6 col-lg-4 service-item-list">
+                <i class="icofont-check-circled"></i> RWA Activations 
+             </div>
+             <div class="col-sm-12 col-md-6 col-lg-4 service-item-list">
+                 <i class="icofont-check-circled"></i>Rural Engagement Activities
+             </div>
+             <div class=" col-sm-12 col-md-6 col-lg-4 service-item-list">
+              <i class="icofont-check-circled"></i>	Nukkad Natak
+             </div>
+             <div class=" col-sm-12 col-md-6 col-lg-4 service-item-list">
+              <i class="icofont-check-circled"></i>Treasure Hunt
+             </div>
+             <div class=" col-sm-12 col-md-6 col-lg-4 service-item-list">
+              <i class="icofont-check-circled"></i>	Mystery Shopper
+             </div>
+             <div class="col-sm-12 col-md-6 col-lg-4  service-item-list"> <i class="icofont-check-circled"></i> Traffic Junction Activity
+             </div>
+             <div class="col-sm-12 col-md-6 col-lg-4  service-item-list"> <i class="icofont-check-circled"></i>Production Sampling & Communication
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4  service-item-list"><i class="icofont-check-circled"></i> Pub Activation 
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4  service-item-list"><i class="icofont-check-circled"></i> College Activation 
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 service-item-list "> <i class="icofont-check-circled"></i> Corporate Activations 
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4  service-item-list"> <i class="icofont-check-circled"></i> Airport Activities 
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4  service-item-list"><i class="icofont-check-circled"></i>  Bike Tagging
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4  service-item-list"> <i class="icofont-check-circled"></i> Look Walkers 
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4  service-item-list"> <i class="icofont-check-circled"></i> 	Gym / Joggers Park
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4  service-item-list"> <i class="icofont-check-circled"></i> CSR campaigns
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4  service-item-list">
+            </div>
+            
           </div>
-          <div class="  col-sm-12 col-md-6 col-lg-6 service-item-list">
-            <i class="icofont-check-circled"></i> 3D designs and installation.
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-6 service-item-list">
-            <i class="icofont-check-circled"></i> Customized booths.
-          </div>
-
-
         </div>
-      </div>
-
-
-      <div class="row service-image-row-right mt-4 pt-4 " data-aos="fade-right">
-
-        <div class="col-sm-12 col-md-7   service-text"><span class="service-numbering-span">04</span>
-          <h4 class="service-heading">
-            BTL ACTIVATION & BRAND PROMOTION </h4>
-          <blockquote>
-            <i class="icofont-quote-left"></i>
-            The most important thing to remember is you must know your audience – Lewis Howes
-            <i class="icofont-quote-right"></i>
-          </blockquote>
-          <p>
-            Below the line activation is one of the key operating area of ‘Agranee Events’. Over the time with
-            innovation and customization we have been able to reach the TG with the right approach through a range of
-            multiple activities which suits the ‘TG’ and the brand communication.</p>
-          <p>
-
-            We specialize in range of activities which target a huge range of audience; be it Sec A+ or rural/mass
-            activities we engage with the right idea and communication to generate maximum buzz for the brand.
-
-          </p>
-          <p>
-            We at Agranee treat every campaign specifically irrespective of the duration or the scale of it, our goal is
-            to give optimum results from every project. From pre-hype till post activity reporting we take care of all.
-          </p>
-
-        </div>
-        <div
-          class=" col-sm-12 col-md-5 service-image-right d-flex  justify-content-sm-between justify-content-md-around  mb-4">
-          <img src="img/btl&promotions.jpg" class="img-fluid align-self-center " alt="BRANDING & FABRICATION"></div>
-
-        <div class=" row d-flex justify-content-center pt-2 pl-3 ">
-          <div class="col-12 key-engagements-right"> Range of BTL activities:</div>
-
-
-          <div class=" col-sm-12 col-md-6 col-lg-4 service-item-list ">
-            <i class="icofont-check-circled"></i>Mall Promotions
-          </div>
-          <div class=" col-sm-12 col-md-6 col-lg-4 service-item-list">
-            <i class="icofont-check-circled"></i> Road Shows
-          </div>
-          <div class="  col-sm-12 col-md-6 col-lg-4 service-item-list">
-            <i class="icofont-check-circled"></i> RWA Activations
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 service-item-list">
-            <i class="icofont-check-circled"></i>Rural Engagement Activities
-          </div>
-          <div class=" col-sm-12 col-md-6 col-lg-4 service-item-list">
-            <i class="icofont-check-circled"></i> Nukkad Natak
-          </div>
-          <div class=" col-sm-12 col-md-6 col-lg-4 service-item-list">
-            <i class="icofont-check-circled"></i>Treasure Hunt
-          </div>
-          <div class=" col-sm-12 col-md-6 col-lg-4 service-item-list">
-            <i class="icofont-check-circled"></i> Mystery Shopper
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4  service-item-list"> <i class="icofont-check-circled"></i> Traffic
-            Junction Activity
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4  service-item-list"> <i class="icofont-check-circled"></i>Production
-            Sampling & Communication
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4  service-item-list"><i class="icofont-check-circled"></i> Pub
-            Activation
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4  service-item-list"><i class="icofont-check-circled"></i> College
-            Activation
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 service-item-list "> <i class="icofont-check-circled"></i> Corporate
-            Activations
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4  service-item-list"> <i class="icofont-check-circled"></i> Airport
-            Activities
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4  service-item-list"><i class="icofont-check-circled"></i> Bike Tagging
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4  service-item-list"> <i class="icofont-check-circled"></i> Look
-            Walkers
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4  service-item-list"> <i class="icofont-check-circled"></i> Gym /
-            Joggers Park
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4  service-item-list"> <i class="icofont-check-circled"></i> CSR
-            campaigns
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4  service-item-list">
+        <div class="row service-image-row-left pt-4 mt-4 " data-aos="fade-left">
+          <div class="col-md-7 offset-md-5 ">
+            <h4 class="service-heading ">
+              SETUP RENTALS</h4>
           </div>
 
-        </div>
-      </div>
-      <div class="row service-image-row-left pt-4 mt-4 " data-aos="fade-left">
-        <div class="col-md-7 offset-md-5 ">
-          <h4 class="service-heading ">
-            SETUP RENTALS</h4>
-        </div>
-
-        <div class=" col-sm-12 col-md-5 service-image-left d-flex  justify-content-md-between  mb-4 pt-4"><img
-            src="img/rentals.jpg" class="img-fluid align-self-center " alt="corporate events"></div>
-
-        <div class="col-sm-12 col-md-7  service1-text"><span class="service-numbering-span">05</span>
-
-          <p>
-            Though at ‘Agranee Events’ our idea is to give our clients end to end solutions at the same time we also
-            offer them the ease and freedom to customize events of their own, to help our clients and associates we also
-            have rental services for wide range of event props and fabrication elements.At a very reasonable price you
-            can avail these elements from us.
-          </p>
-
-        </div>
-
-        <div class=" row d-flex justify-content-center pt-2 pl-3">
-          <div class=" col-12 key-engagements"> Listed elements: </div>
-          <div class=" col-sm-12 col-md-6 col-lg-6 service-item-list ">
-            <i class="icofont-check-circled"></i> Q- Manager
+          <div class=" col-sm-12 col-md-5 service-image-left d-flex  justify-content-md-between  mb-4 pt-4"><img src="img/rentals.jpg" class="img-fluid align-self-center " alt="corporate events"></div>
+         
+          <div class="col-sm-12 col-md-7  service1-text"><span class="service-numbering-span">05</span>
+            
+              <p>
+                Though at ‘Agranee Events’ our idea is to give our clients end to end solutions at the same time we also offer them the ease and freedom to customize events of their own, to help our clients and associates we also have rental services for wide range of event props and fabrication elements.At a very reasonable price you can avail these elements from us.             
+              </p>              
+            
+          </div>            
+     
+          <div class=" row d-flex justify-content-center pt-2 pl-3">
+            <div class=" col-12 key-engagements"> Listed elements: </div> 
+             <div class=" col-sm-12 col-md-6 col-lg-6 service-item-list ">
+              <i class="icofont-check-circled"></i> Q- Manager
+             </div>
+             <div class=" col-sm-12 col-md-6 col-lg-6 service-item-list">
+              <i class="icofont-check-circled"></i> 	PA system
+             </div>
+             <div class="col-sm-12 col-md-6 col-lg-6 service-item-list">
+              <i class="icofont-check-circled"></i> Game Console – Wheel of fortune, Tug of war, Foosball, Mini-golf, Ice Hockey Table, Jenga Game, Fishing kit
+             </div>
+             <div class="  col-sm-12 col-md-6 col-lg-6 service-item-list">
+              <i class="icofont-check-circled"></i> 	Electronic Gadgets – LED TV, Laptop, printer, i-pad
+             </div>
+            
+             <div class=" col-sm-12 col-md-6 col-lg-6 service-item-list">
+             <i class="icofont-check-circled"></i>  Bar Stools –White & Black
+             </div>
+             <div class=" col-sm-12 col-md-6 col-lg-6 service-item-list">
+             <i class="icofont-check-circled"></i>  Exhibition Chairs & table
+             </div>
+             <div class=" col-sm-12 col-md-6 col-lg-6 service-item-list">
+              <i class="icofont-check-circled"></i> Coffee Vending Machines
+             </div>
+             <div class="col-sm-12 col-md-6 col-lg-6  service-item-list"> <i class="icofont-check-circled"></i> 	Treasure Box
+             </div>
+            
           </div>
-          <div class=" col-sm-12 col-md-6 col-lg-6 service-item-list">
-            <i class="icofont-check-circled"></i> PA system
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-6 service-item-list">
-            <i class="icofont-check-circled"></i> Game Console – Wheel of fortune, Tug of war, Foosball, Mini-golf, Ice
-            Hockey Table, Jenga Game, Fishing kit
-          </div>
-          <div class="  col-sm-12 col-md-6 col-lg-6 service-item-list">
-            <i class="icofont-check-circled"></i> Electronic Gadgets – LED TV, Laptop, printer, i-pad
-          </div>
-
-          <div class=" col-sm-12 col-md-6 col-lg-6 service-item-list">
-            <i class="icofont-check-circled"></i> Bar Stools –White & Black
-          </div>
-          <div class=" col-sm-12 col-md-6 col-lg-6 service-item-list">
-            <i class="icofont-check-circled"></i> Exhibition Chairs & table
-          </div>
-          <div class=" col-sm-12 col-md-6 col-lg-6 service-item-list">
-            <i class="icofont-check-circled"></i> Coffee Vending Machines
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-6  service-item-list"> <i class="icofont-check-circled"></i> Treasure
-            Box
-          </div>
-
-        </div>
       </div>
 
     </div>
@@ -721,37 +702,29 @@
 
   <section class="whyus" id="whyus">
     <div class="jumbotron narrow corporate-events" data-aos="fade-up">
-      <div class="col-12 text-center ">
-        <h3 class="heading">Why US</h3>
-        <div class="heading-underline "></div>
-      </div>
-      <div class="row whyus-row d-lg-flex justify-content-center">
-        <div class="col-md-4 col-lg-4 reason">
-          <h4>Cost-effective </h4>
-          <p>we have always worked toward giving optimum results at a reasonable price, in lieu to the same we have
-            extensively enriched ourselves with inventory and in house production ; which allows us to offer our clients
-            with one of the most competitive price in the market along with standout quality & execution.</p>
-        </div>
-        <div class="col-md-4 col-lg-4 reason">
-          <h4>Great Team</h4>
-          <p>With over a decade into the business we have evolved as a realistic core team of professionals, each one of
-            us is a master of his own trade, from designers to fabricators, project managers. What makes us different
-            from others is the experience of the team, & the crisis management expertise. </p>
-        </div>
-
-
-        <div class="col-md-4 col-lg-4 reason">
-          <h4>Planning</h4>
-          <p>We put our heart and soul in planning of any campaign , before the head into the execution we try to cover
-            all the possibilities and real time situations which may well occur while execution. This approach has given
-            us the edge over others in bringing the ‘X factor’ in our projects. </p>
-        </div>
-        <div class="col-md-6 col-lg-6 reason">
-          <h4>Execution</h4>
-          <p>Over the time we have learnt to settle to nothing less than perfection when it comes to execution. A
-            picture perfect finish is what “ Agranee Events “ has become a synonym for. With the help of our team of
-            expert we take of every minute detail which makes the difference. </p>
-        </div>
+    <div class="col-12 text-center ">
+      <h3 class="heading">Why US</h3>
+      <div class="heading-underline "></div>
+    </div>
+   <div class="row whyus-row d-lg-flex justify-content-center">
+     <div class="col-md-4 col-lg-4 reason">
+      <h4>Cost-effective </h4>
+      <p>we have always worked toward giving optimum results at a reasonable price, in lieu to the same we have extensively enriched ourselves with inventory and in house production ; which allows us to offer our clients with one of the most competitive price in the market along with standout quality & execution.</p>
+     </div>  
+     <div class="col-md-4 col-lg-4 reason">
+       <h4>Great Team</h4>
+       <p>With over a decade into the business we have evolved as a realistic core team of professionals, each one of us is a master of his own trade, from designers to fabricators, project managers. What makes us different from others is the experience of the team, & the crisis management expertise. </p>
+    </div> 
+    
+    
+    <div class="col-md-4 col-lg-4 reason">
+      <h4>Planning</h4>
+      <p>We put our heart and soul in planning of any campaign , before the head into the execution we try to cover all the possibilities and real time situations which may well occur while execution. This approach has given us the edge over others in bringing the ‘X factor’ in our projects. </p>
+   </div>
+   <div class="col-md-6 col-lg-6 reason">
+    <h4>Execution</h4>
+    <p>Over the time we have learnt to settle to nothing less than perfection when it comes to execution. A picture perfect finish is what “ Agranee Events “ has become a synonym for. With the help of our team of expert we take of every minute detail which makes the difference. </p>
+  </div>
 
         <div class="col-md-6 col-lg-6 reason">
           <h4>Result-oriented</h4>
@@ -786,47 +759,41 @@
 
           <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3783.4949091000076!2d73.91142261399166!3d18.506524337417115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s502%2C%20KUMAR%20Primus%2C%20Solapur%20-%20Pune%20Hwy%2C%20Ramtekadi%2C%20Hadapsar%2C%20Pune%2C%20Maharashtra%20411028!5e0!3m2!1snl!2snl!4v1591392922983!5m2!1snl!2snl" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
         </div>
-      </div>
-      <!-- contact info -->
-      <div class="col-sm-12 col-m-12 col-lg-6 contact-info-footer ">
-        <div class=" info d-flex align-self-start">
-
-          <i class="icofont-google-map "></i>
-          <div class="address-text">
-            <h5>Company Address</h5>
-            <p class="mt-0 mb-0">502, KUMAR Primus, Solapur - Pune Hwy, Ramtekadi, Hadapsar</p>
-            <p class="mt-0">Pune, Maharashtra-411028 , India</p>
-          </div>
-
-
-        </div>
-        <div class="info d-flex mt-2">
-          <i class="icofont-email "></i>
-          <div>
-            <h5>E-mail</h5>
-            <p class="mt-0 mb-0"><a href='contact.html'>Contact us</a></p>
-          </div>
-
-
-
-        </div>
-        <div class=" info d-flex mt-4">
-          <i class="icofont-phone "></i>
+       </div>
+       <!-- contact info -->
+       <div class="col-sm-12 col-m-12 col-lg-6 contact-info-footer ">
+            <div class=" info d-flex align-self-start">
+                    
+                     <i class="icofont-google-map "></i>
+                       <div class="address-text"><h5>Company Address</h5><p class="mt-0 mb-0">502, KUMAR Primus, Solapur - Pune Hwy, Ramtekadi, Hadapsar</p>
+                      <p class="mt-0">Pune, Maharashtra-411028 , India</p></div>           
+            
+              
+            </div>
+            <div class="info d-flex mt-2">
+               <i class="icofont-email "></i>
+               <div><h5>E-mail</h5><p class="mt-0 mb-0"><a href='contact.html'>Contact us</a></p></div>
+               
+               
+              
+              </div>
+      <div class=" info d-flex mt-4">
+         <i class="icofont-phone "></i>
           <div>
             <h5>Phone Number</h5>
             <p>+91 89830 60689</p>
           </div>
         </div>
-
-
-  </section>
-  <hr class="mx-0 my-0">
-  <section class="bottom-footer text-center p-2">
-    &copy; Copyright 2024, Agranee Events, All Rights Reserved
-    <p>Designed & Developed by <em style="color:orangered;">Fusion Fiesta Team</em></p>
-  </section>
-  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
-  <div id="preloader"></div>
+        
+       
+      </section>
+      <hr class="mx-0 my-0">
+      <section class="bottom-footer text-center p-2">
+          &copy; Copyright 2024, Agranee Events, All Rights Reserved
+          <p>Designed & Developed by <em style="color:orangered;">Fusion Fiesta Team</em></p>
+      </section>
+      <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+      <div id="preloader"></div>
   <!-- </footer> -->
 
 
