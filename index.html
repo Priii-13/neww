@@ -625,6 +625,24 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     $(document).ready(function () {
+        // Function to update the event collector display
+        function updateEventCollector() {
+            var events = JSON.parse(localStorage.getItem('events')) || [];
+            $('#event-collector').empty(); // Clear previous events
+
+            if (events.length === 0) {
+                $('#event-collector').append('<div>No events added yet.</div>');
+            } else {
+                events.forEach(function(eventName) {
+                    var newEvent = $('<div class="event-item"></div>').text(eventName);
+                    $('#event-collector').append(newEvent);
+                });
+            }
+        }
+
+        // Initial load of events into the collector
+        updateEventCollector();
+
         $('.add-event').click(function () {
             // Gets the event name from the button's data attribute
             var eventName = $(this).data('event');
@@ -642,6 +660,9 @@
                 
                 // Show a notification
                 alert(eventName + ' added successfully!');
+
+                // Update the event collector display
+                updateEventCollector();
             } else {
                 alert(eventName + ' is already in your events.');
             }
