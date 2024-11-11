@@ -1,4 +1,8 @@
-.contact-section {
+.bg{
+    background-color: #eb6e34
+}
+
+    .contact-section {
     width: 100%;
     max-width: 40rem;
     margin-left: auto;
