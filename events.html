@@ -231,36 +231,33 @@
 
     <script>
         $(document).ready(function () {
-          // Function to load events from localStorage into My Events section
-          function loadMyEvents() {
-            const events = JSON.parse(localStorage.getItem('events')) || [];
-            $('#event-collector').empty(); // Clear previous events
-      
-            if (events.length === 0) {
-              $('#event-collector').append('<div>No events selected.</div>');
-            } else {
-              events.forEach(function(event) {
-                // Display event details
+    function loadMyEvents() {
+        const events = JSON.parse(localStorage.getItem('events')) || [];
+        $('#event-collector').empty();
+
+        if (events.length === 0) {
+            $('#event-collector').append('<div>No events selected.</div>');
+        } else {
+            events.forEach(function (event) {
                 const eventDetails = `
-                  <div class="event-item">
-                    <h5>${event.title}</h5>
-                    <p><strong>Date:</strong> ${event.date}</p>
-                    <p><strong>City:</strong> ${event.city}</p>
-                    <p><strong>College:</strong> ${event.college}</p>
-                  </div>
+                    <div class="event-item">
+                        <h5>${event.title}</h5>
+                        <p><strong>Date:</strong> ${event.date}</p>
+                        <p><strong>City:</strong> ${event.city}</p>
+                        <p><strong>College:</strong> ${event.college}</p>
+                    </div>
                 `;
                 $('#event-collector').append(eventDetails);
-              });
-            }
-          }
-      
-          // Show My Events when the link is clicked
-          $('#my-events-link').click(function(event) {
-            event.preventDefault(); // Prevent default link behavior
-            loadMyEvents(); // Load events
-            $('#my-events-display').toggle(); // Toggle visibility of My Events section
-          });
-        });
+            });
+        }
+    }
+
+    $('#my-events-link').click(function (event) {
+        event.preventDefault();
+        loadMyEvents();
+        $('#my-events-display').toggle();
+    });
+});
       </script>
 
     <div class="container">
