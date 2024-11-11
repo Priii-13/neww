@@ -166,38 +166,42 @@
         }
 
         /* Style for My Events link in the corner */
-    .my-events-link-container {
-      position: relative;
-      text-align: right;
-      margin-top: -50px;
-    }
-    .my-events-link {
-      position: absolute;
-      top: 0;
-      right: 0;
-      font-weight: bold;
-      color: #007bff;
-      text-decoration: none;
-    }
-    .my-events-link:hover {
-      text-decoration: underline;
-    }
-    /* Line connecting Event Finder to My Events */
-    .line-to-my-events {
-      position: relative;
-      margin-top: 15px;
-      height: 2px;
-      background-color: #ddd;
-    }
-    .line-to-my-events::after {
-      content: '';
-      position: absolute;
-      top: -15px;
-      right: 0;
-      width: 20px;
-      height: 2px;
-      background-color: #007bff;
-    }
+        .my-events-link-container {
+            position: relative;
+            text-align: right;
+            margin-top: -50px;
+        }
+
+        .my-events-link {
+            position: absolute;
+            top: 0;
+            right: 10px;
+            font-weight: bold;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .my-events-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Line connecting Event Finder to My Events */
+        .line-to-my-events {
+            position: relative;
+            margin-top: 15px;
+            height: 2px;
+            background-color: #ddd;
+        }
+
+        .line-to-my-events::after {
+            content: '';
+            position: absolute;
+            top: -15px;
+            right: 0;
+            width: 20px;
+            height: 2px;
+            background-color: #007bff;
+        }
     </style>
 </head>
 
@@ -210,46 +214,52 @@
             style="top: 10px; right: 10px; font-size: 24px; cursor: pointer;" id="openModal">
         </div>
         <a href="#" id="my-events-link" class="my-events-link">My Events</a>
-    </div>
-    <div class="line-to-my-events"></div>
+        </div>
+        <div class="line-to-my-events"></div>
 
     </header>
     <a href="index.html">Back to Event Manager</a>
-  <!-- My Events Display Section -->
-  <div id="my-events-display" class="mt-4" style="display: none;">
-    <h4>My Events</h4>
-    <div id="event-collector">
-      <!-- Events will be loaded here when the link is clicked -->
+    <!-- My Events Display Section -->
+    <div id="my-events-display" class="mt-4" style="display: none;">
+        <h4>My Events</h4>
+        <div id="event-collector">
+            <!-- Events will be loaded here when the link is clicked -->
+        </div>
     </div>
-  </div>
-</div>
+    </div>
 
-<script>
-  $(document).ready(function () {
-    // Function to load events from localStorage into My Events section
-    function loadMyEvents() {
-      var events = JSON.parse(localStorage.getItem('events')) || [];
-      $('#event-collector').empty(); // Clear previous events
+    <script>
+        $(document).ready(function () {
+            // Function to load events from localStorage into My Events section
+            function loadMyEvents() {
+                var events = JSON.parse(localStorage.getItem('events')) || [];
+                $('#event-collector').empty(); // Clear previous events
 
-      if (events.length === 0) {
-        $('#event-collector').append('<div>No events selected.</div>');
-      } else {
-        events.forEach(function(eventName) {
-          var newEvent = $('<div class="event-item"></div>').text(eventName);
-          $('#event-collector').append(newEvent);
+                if (events.length === 0) {
+                    $('#event-collector').append('<div>No events selected.</div>');
+                } else {
+                    events.forEach(function (event) {
+                        var eventDetails = `
+              <div class="event-item">
+                <h5>${event.title}</h5>
+                <p><strong>Date:</strong> ${event.date}</p>
+                <p><strong>City:</strong> ${event.city}</p>
+                <p><strong>College:</strong> ${event.college}</p>
+              </div>
+            `;
+                        $('#event-collector').append(eventDetails);
+                    });
+                }
+            }
+
+            // Show My Events when the link is clicked
+            $('#my-events-link').click(function (event) {
+                event.preventDefault(); // Prevent default link behavior
+                loadMyEvents(); // Load events
+                $('#my-events-display').toggle(); // Toggle visibility of My Events section
+            });
         });
-      }
-    }
-
-    // Show My Events when the link is clicked
-    $('#my-events-link').click(function(event) {
-      event.preventDefault(); // Prevent default link behavior
-      loadMyEvents(); // Load events
-      $('#my-events-display').toggle(); // Toggle visibility of My Events section
-    });
-  });
-</script>
-
+    </script>
 
     <div class="container">
         <!-- Sidebar with Filters -->
