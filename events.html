@@ -164,6 +164,40 @@
             text-decoration: none;
             cursor: pointer;
         }
+
+        /* Style for My Events link in the corner */
+    .my-events-link-container {
+      position: relative;
+      text-align: right;
+      margin-top: -50px;
+    }
+    .my-events-link {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-weight: bold;
+      color: #007bff;
+      text-decoration: none;
+    }
+    .my-events-link:hover {
+      text-decoration: underline;
+    }
+    /* Line connecting Event Finder to My Events */
+    .line-to-my-events {
+      position: relative;
+      margin-top: 15px;
+      height: 2px;
+      background-color: #ddd;
+    }
+    .line-to-my-events::after {
+      content: '';
+      position: absolute;
+      top: -15px;
+      right: 0;
+      width: 20px;
+      height: 2px;
+      background-color: #007bff;
+    }
     </style>
 </head>
 
@@ -178,16 +212,21 @@
     </header>
 
     <a href="index.html">Back to Event Manager</a>
+<!-- My Events Link -->
+<div class="mt-4">
+    <a href="#" id="my-events-link" class="btn btn-outline-primary">My Events</a>
+  </div>
 
-    <!-- My Events Tab -->
-  <div id="my-events" class="mt-4">
+  <!-- My Events Display Section -->
+  <div id="my-events-display" class="mt-4" style="display: none;">
     <h4>My Events</h4>
     <div id="event-collector">
-      <!-- Events will be loaded here -->
+      <!-- Events will be loaded here when the link is clicked -->
     </div>
   </div>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script>
   $(document).ready(function () {
     // Function to load events from localStorage into My Events section
@@ -196,7 +235,7 @@
       $('#event-collector').empty(); // Clear previous events
 
       if (events.length === 0) {
-        $('#event-collector').append('<div>No events added yet.</div>');
+        $('#event-collector').append('<div>No events selected.</div>');
       } else {
         events.forEach(function(eventName) {
           var newEvent = $('<div class="event-item"></div>').text(eventName);
@@ -205,8 +244,12 @@
       }
     }
 
-    // Load events on page load
-    loadMyEvents();
+    // Show My Events when the link is clicked
+    $('#my-events-link').click(function(event) {
+      event.preventDefault(); // Prevent default link behavior
+      loadMyEvents(); // Load events
+      $('#my-events-display').toggle(); // Toggle visibility of My Events section
+    });
   });
 </script>
 
