@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Page</title>
+    <style>
+        /* Styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Styling for the page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(10, 10, 33);
+            color: #333;
+        }
+
+        /* Header styling */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        header h1 {
+            font-size: 1.5em;
+        }
+
+        /* Container for the page content */
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+
+        /* Sidebar for filters */
+        .sidebar {
+            width: 250px;
+            background-color: #fff;
+            padding: 20px;
+            margin-right: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .filter {
+            margin-bottom: 20px;
+        }
+
+        .filter h1 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .filter label {
+            display: block;
+            margin-top: 10px;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .filter select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+        }
+
+        /* Event cards container */
+        .event-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            width: 100%;
+        }
+
+        /* Event card style */
+        .event-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            color: #333;
+        }
+
+        .event-card:hover {
+            transform: scale(1.05);
+        }
+
+        .event-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .event-card .card-content {
+            padding: 15px;
+        }
+
+        .event-card .card-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .event-card .card-content p {
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        .event-card .card-content .date-time {
+            font-size: 1rem;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        /* Section titles */
+        .section-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Event status title */
+        .event-status {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* Filtered event styling */
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Event Finder</h1>
+    </header>
+
+    <div class="container">
+
+        <!-- Sidebar with Filters -->
+        <aside class="sidebar">
+            <div class="filter">
+                <h1>Filters</h1>
+                <label for="eventType">Event Type</label>
+                <select id="eventType">
+                    <option value="all">All Events</option>
+                    <option value="educational">Educational</option>
+                    <option value="cultural">Cultural</option>
+                    <option value="sports">Sports</option>
+                    <option value="alumni">Alumni Meetup</option>
+                </select>
+            </div>
+            <div class="filter">
+                <label for="eventPrice">Price</label>
+                <select id="eventPrice">
+                    <option value="all">All Prices</option>
+                    <option value="free">Free</option>
+                    <option value="paid">Paid</option>
+                </select>
+            </div>
+            <div class="filter">
+                <label for="eventCity">City</label>
+                <select id="eventCity">
+                    <option value="all">All Cities</option>
+                    <option value="bhopal">Bhopal</option>
+                    <option value="indore">Indore</option>
+                    <option value="jabalpur">Jabalpur</option>
+                </select>
+            </div>
+            <div class="filter">
+                <label for="eventCollege">College</label>
+                <select id="eventCollege">
+                    <option value="all">All Colleges</option>
+                    <option value="uit rgpv">UIT RGPV</option>
+                    <option value="soit rgpv">SOIT RGPV</option>
+                </select>
+            </div>
+        </aside>
+
+        <!-- Event Cards Container -->
+        <section class="event-cards">
+            <div class="event-card" data-type="educational">
+                <img src="assets/educational-event.jpg" alt="Event Image">
+                <div class="card-content">
+                    <h3>Educational Event</h3>
+                    <p>A description of an educational event happening in Bhopal.</p>
+                    <p class="date-time">City : Bhopal | Date: 25th Nov | Time: 10 AM | Location: UIT RGPV | Price : Free</p>
+                </div>
+            </div>
+            <div class="event-card" data-type="cultural">
+                <img src="assets/Cultural.png" alt="Event Image">
+                <div class="card-content">
+                    <h3>Cultural Fest</h3>
+                    <p>Celebrate culture in Indore with this event.</p>
+                    <p class="date-time">City : Indore | Date: 30th Sept 2024 | Time: 5 PM | Location: SOIT RGPV | Price : Paid</p>
+                </div>
+            </div>
+            <div class="event-card" data-type="sports">
+                <img src="assets/sports-event.jpg" alt="Event Image">
+                <div class="card-content">
+                    <h3>Annual Marathon 2024</h3>
+                    <p>Join us for the Annual Marathon 2024! Participate in various categories including 5K, 10K, and Half Marathon. Enjoy a day of fitness, fun, and community spirit. All participants will receive a medal and a T-shirt.</p>
+                    <p class="date-time">City : Jabalpur | Date: 15th March, 2024 | Time: 6 PM | Location: UIT Ground | Price : Free</p>
+                </div>
+            </div>
+            <div class="event-card" data-type="alumni">
+                <img src="assets\Alumuni meetup.jpg" alt="Event Image">
+                <div class="card-content">
+                    <h3>Alumni MeetUp</h3>
+                    <p>Reconnect with your classmates, share memories, and network with fellow alumni. The event will include guest speakers, a panel discussion, and a dinner reception.</p>
+                    <p class="date-time">City : Bhopal | Date: 25th April 2024 | Time: 7 PM | Location: SOIT Auditorium | Price : Paid</p>
+                </div>
+            </div>
+            <div class="event-card" data-type="workshop">
+                <img src="assets/Workshop_on_AI.webp" alt="Event Image">
+                <div class="card-content">
+                    <h3>Workshop on Artificial Intelligence</h3>
+                    <p>Join us for a hands-on workshop on Artificial Intelligence and Machine Learning. Learn from industry experts and gain practical experience.</p>
+                    <p class="date-time">City : Indore | Date: 5th May 2024 | Time: 10 AM | Location: UIT Main Campus | Price : Free</p>
+                </div>
+            </div>
+            <div class="event-card" data-type="seminar">
+                <img src="assets/Seminar_on_Cyber_Security.jpg" alt="Event Image">
+                <div class="card-content">
+                    <h3>Seminar on Cyber Security</h3>
+                    <p>Enhance your knowledge about cyber threats and defenses. This seminar will feature expert speakers and interactive sessions.</p>
+                    <p class="date-time">City : Bhopal | Date: 15th May 2024 | Time: 3 PM | Location: SOIT Auditorium | Price : Free</p>
+                </div>
+            </div>
+            <div class="event-card" data-type="guest-lecture">
+                <img src="assets/Guest_Lecture.jpg" alt="Event Image">
+                <div class="card-content">
+                    <h3>Guest Lecture by Industry Leaders</h3>
+                    <p>Don't miss the chance to hear from leading industry professionals as they share their insights and experiences.</p>
+                    <p class="date-time">City : Bhopal | Date: 10th June 2024 | Time: 2 PM | Location: Conference Hall SOIT | Price : Free</p>
+                    </div>
+                </div>
+        </section>
+    </div>
+
+    <script>
+        // Filter functionality
+        const eventTypeFilter = document.getElementById('eventType');
+        const allEvents = document.querySelectorAll('.event-card');
+
+        eventTypeFilter.addEventListener('change', function () {
+            const selectedType = this.value;
+
+            allEvents.forEach(event => {
+                if (selectedType === 'all') {
+                    event.classList.remove('hidden');
+                } else {
+                    const eventType = event.getAttribute('data-type');
+                    if (eventType !== selectedType) {
+                        event.classList.add('hidden');
+                    } else {
+                        event.classList.remove('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

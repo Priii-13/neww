@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -100,6 +99,9 @@
                   <a href="#services" class="nav-link">Services</a>
                 </li>
                 <li class="nav-item">
+                  <a href="#events" class="nav-link">Events</a>
+                </li>
+                <li class="nav-item">
                   <a href="#whyus" class="nav-link">WHy US</a>
                 </li>
                 <li class="nav-item">
@@ -133,7 +135,7 @@
  
     </section>
      <!-- section testimonials start -->
-     <section class="testimonials section-bg  data-aos="fade-up" data-aos-delay="100""   >
+     <section class="testimonials section-bg"  data-aos="fade-up" data-aos-delay="100"  >
       <div class="jumbotron narrow section-bg">
           <div class="col-12 text-center">
               <h3 class="heading">
@@ -282,7 +284,7 @@
               <div class="heading-underline"></div>
           </div>
           
-          <div class="row service-image-row-left mt-4 pt-4  data-aos="fade-left"">
+          <div class="row service-image-row-left mt-4 pt-4"  data-aos="fade-left">
             <div class="col-md-7 offset-md-5 ">
               <h4 class="service-heading ">
                 Corporate Events</h4>
@@ -547,9 +549,71 @@
       </div>
 
       </div>
-      
-   
   </section>
+
+
+<!-- Events Section here -->
+<section class="events" id="events">
+  <div class="jumbotron narrow corporate-events" style="background-color: #eb6e34; color: black;" data-aos="fade-up">
+  <div class="col-12 text-center ">
+    <h3 class="heading">UPCOMING EVENTS</h3>
+    <div class="heading-underline "></div>
+  </div>
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Event Card 1 -->
+      <article class="bg-white mt-5 rounded-lg shadow-lg p-6">
+        <h3 class="text-xl font-semibold mb-2 p-4">Spring Fest 2024</h3>
+        <p class="text-gray-700">Date: April 10, 2024</p>
+        <p class="text-gray-700">Location: UIT RGPV College Ground</p>
+        <p class="text-gray-700">Description: Join us for a day of fun, games, and performances at our annual Spring Fest! Enjoy live music, food stalls, and various activities.</p>
+      </article>
+
+      <!-- Event Card 2 -->
+      <article class="bg-white mt-5 rounded-lg shadow-lg p-6"> 
+        <h3 class="text-xl font-semibold mb-2 p-4">Guest Lecture: Innovations in Technology</h3>
+        <p class="text-gray-700">Date: October 15, 2024</p>
+        <p class="text-gray-700">Location: SOIT RGPV Auditorium</p>
+        <p class="text-gray-700">Description: Attend a guest lecture by renowned tech entrepreneur Jane Doe, who will discuss the latest innovations and trends in technology.</p>
+      </article>
+
+      <!-- Event Card 3 -->
+      <article class="bg-white mt-5 rounded-lg shadow-lg p-6"> 
+        <h3 class="text-xl font-semibold mb-2 p-4">Career Fair 2024</h3>
+        <p class="text-gray-700">Date: June 20, 2024</p>
+        <p class="text-gray-700">Location: Main Hall </p>
+        <p class="text-gray-700">Description: Meet potential employers and explore job opportunities at our annual Career Fair. Bring your resume and be ready to network!</p>
+      </article>
+      </div>
+      <div class="text-center mt-5">
+        <a href="events.html" class="btn bg-white py-3 px-4 rounded-lg shadow">
+            Explore Events
+        </a>
+    </div>
+
+<script>
+  // GSAP animation
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Selects all event cards
+  const cards = document.querySelectorAll('.bg-white');
+
+  // Animate cards on scroll
+  cards.forEach(card => {
+      gsap.from(card, {
+          scrollTrigger: {
+              trigger: card,
+              start: "top 80%", // Trigger when card is 80% from the top of the viewport
+              toggleActions: "play none none reverse",
+          },
+          opacity: 0,
+          y: 30, // Move down 30 pixels
+          duration: 0.5,
+      });
+  });
+</script>
+</section>
+
+
   <section class="whyus" id="whyus">
     <div class="jumbotron narrow corporate-events" data-aos="fade-up">
     <div class="col-12 text-center ">
@@ -580,7 +644,6 @@
     <h4>Result-oriented</h4>
     <p>We understand the intent of the client behind the campaign & we strive to achieve so. We act as the custodians of the brand while the campaign and own it for every success or failures; this approach has not only given us some path breaking successful campaign but also cordial relationships with our clients. </p>
  </div> 
-  
 </div>
   </section>
 
@@ -600,7 +663,7 @@
      <div class="row contact-row">
       <div class="col-sm-12 col-md-12 col-lg-6">
         <div class="" >
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.49341381743!2d73.91133271399163!3d18.506591987417078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b8b02f1666a9%3A0xc5c98774abb86a8b!2sAgranee%20Events!5e0!3m2!1snl!2snl!4v1592260120050!5m2!1snl!2snl" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3664.1539170011556!2d77.35908247514959!3d23.3101736789733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c663a2f02fc89%3A0x12a6b478bbd192f1!2sUniversity%20Institute%20of%20Technology%20RGPV!5e0!3m2!1sen!2sin!4v1731266152369!5m2!1sen!2sin" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 
 
          <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3783.4949091000076!2d73.91142261399166!3d18.506524337417115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s502%2C%20KUMAR%20Primus%2C%20Solapur%20-%20Pune%20Hwy%2C%20Ramtekadi%2C%20Hadapsar%2C%20Pune%2C%20Maharashtra%20411028!5e0!3m2!1snl!2snl!4v1591392922983!5m2!1snl!2snl" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
@@ -618,7 +681,7 @@
             </div>
             <div class="info d-flex mt-2">
                <i class="icofont-email "></i>
-               <div><h5>E-mail</h5><p class="mt-0 mb-0">office@sampledomain.com</p></div>
+               <div><h5>E-mail</h5><p class="mt-0 mb-0"><a href='contact.html'>Contact us</a></p></div>
                
                
               
@@ -635,8 +698,8 @@
       </section>
       <hr class="mx-0 my-0">
       <section class="bottom-footer text-center p-2">
-          &copy; Copyright 2020, Agranee Events, All Rights Reserved
-          <p>Designed & Developed by <em style="color:orangered;">Shahina Kamal</em></p>
+          &copy; Copyright 2024, Agranee Events, All Rights Reserved
+          <p>Designed & Developed by <em style="color:orangered;">Fusion Fiesta Team</em></p>
       </section>
       <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
       <div id="preloader"></div>
@@ -668,5 +731,10 @@
     <script src="vendor/aos/aos.js"></script>
      <!-- Template Main JS File -->
   <script type="module" src="js/main.js"></script>
+  <script
+    chatbot_id="6730cf0242143bc1d9c65ea5"
+    src="https://app.thinkstack.ai/bot/thinkstackai-loader.min.js">
+</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
   </body>
 </html>

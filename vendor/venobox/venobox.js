@@ -808,4 +808,8 @@
             }); // each
         } // venobox
     }); // extend
+<<<<<<< HEAD
 })(jQuery);
+=======
+})(jQuery);
+>>>>>>> 91719dde21d4bf2481e9a78dc008858bfc4e2f6e
