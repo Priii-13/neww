@@ -28,7 +28,7 @@ An Event Management Website designed to help users create, organize, and manage 
 ## Screenshots
 
 ### Homepage
-![Homepage Screenshot](homepage.jpg)
+![Homepage Screenshot](HomePage)
 
 ### Dashboard
 ![Dashboard Screenshot](https://via.placeholder.com/800x400?text=Dashboard)
