@@ -1,7 +1,8 @@
 
 # Event Management Website
 
-![Event Management Banner](https://via.placeholder.com/800x200?text=Event+Management+Website)
+![Event Management Banner](https://github.com/user-attachments/assets/f6bb3daf-bd43-462e-b2f0-53221485df2a)
+
 
 An Event Management Website designed to help users create, organize, and manage events seamlessly. This web application provides tools for organizers to plan, coordinate, and track events, while allowing attendees to explore, register, and receive updates.
 
