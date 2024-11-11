@@ -35,7 +35,7 @@ An Event Management Website designed to help users create, organize, and manage 
 ![Dashboard Screenshot](https://via.placeholder.com/800x400?text=Dashboard)
 
 ### Event Details Page
-![Event Details Screenshot](https://via.placeholder.com/800x400?text=Event+Details)
+![Event Details Screenshot](https://github.com/user-attachments/assets/361970e0-d3a4-4d71-bea0-ea31859670a8)
 
 ## Tech Stack
 
