@@ -16,6 +16,23 @@ An Event Management Website designed to help users create, organize, and manage 
 - [Contributing](#contributing)
 - [License](#license)
 
+
+## Team Members
+
+We’re a team of passionate developers and contributors who worked together on this project. Here are the amazing members:
+
+| Name                | Role               | GitHub Profile                                          |
+|---------------------|--------------------|---------------------------------------------------------|
+| Priyanka Jhala      | Project Lead       | [priii-13](https://github.com/priii-13)                 |
+| Himansh Prajapati   | Backend Developer  | [himansh-01](https://github.com/himansh-01)             |
+| Archana Nair        | Frontend Developer | [Archana7224](https://github.com/Archana7224)           |
+| Ayush Singh         | UI/UX Designer     | [AyushSingh9893](https://github.com/AyushSingh9893)     |
+
+We’d like to thank everyone for their contributions, hard work, and dedication to making this project a success!
+
+
+
+
 ## Features
 
 - **User Registration and Authentication**: Sign up, log in, and manage profiles.
