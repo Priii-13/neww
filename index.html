@@ -538,8 +538,7 @@
 
     </div>
   </section>
-  
-<!-- Events section here -->
+<!--   Events Section -->
 <section class="events" id="events">
   <div class="jumbotron narrow corporate-events text-white" style="background-color: #eb6e34;" data-aos="fade-up">
     <div class="col-12 text-center">
@@ -551,7 +550,6 @@
         <!-- Event Card 1 -->
         <div class="col-md-4">
           <div class="card" data-title="Spring Fest 2024" data-date="April 10, 2024" data-city="College Ground" data-college="N/A">
-            <img src="assets/spring-fest.jpg" class="card-img-top" alt="Spring Fest Image">
             <div class="card-body">
               <h5 class="card-title">Spring Fest 2024</h5>
               <p class="card-text">Join us for a day of fun, games, and performances at our annual Spring Fest! Enjoy live music, food stalls, and various activities.</p>
@@ -562,7 +560,6 @@
         <!-- Event Card 2 -->
         <div class="col-md-4">
           <div class="card" data-title="Guest Lecture: Innovations in Technology" data-date="October 15, 2024" data-city="Auditorium A" data-college="N/A">
-            <img src="assets/guest-lecture.jpg" class="card-img-top" alt="Guest Lecture Image">
             <div class="card-body">
               <h5 class="card-title">Guest Lecture: Innovations in Technology</h5>
               <p class="card-text">Attend a guest lecture by renowned tech entrepreneur Jane Doe, who will discuss the latest innovations and trends in technology.</p>
@@ -573,7 +570,6 @@
         <!-- Event Card 3 -->
         <div class="col-md-4">
           <div class="card" data-title="Career Fair 2024" data-date="June 20, 2024" data-city="Main Hall" data-college="N/A">
-            <img src="assets/career-fair.jpg" class="card-img-top" alt="Career Fair Image">
             <div class="card-body">
               <h5 class="card-title">Career Fair 2024</h5>
               <p class="card-text">Meet potential employers and explore job opportunities at our annual Career Fair. Bring your resume and be ready to network!</p>
@@ -597,29 +593,31 @@
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-<script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+
+  <script>
     // GSAP animation
     gsap.registerPlugin(ScrollTrigger);
 
     // Selects all cards
-    const cards = document.querySelectorAll('.bg-white');
+    const cards = document.querySelectorAll('.card');
 
     // Animate cards on scroll
     cards.forEach(card => {
- gsap.from(card, {
-          scrollTrigger: {
-              trigger: card,
-              start: "top 80%", // Trigger when card is 80% from the top of the viewport
-              toggleActions: "play none none reverse",
-          },
-          opacity: 0,
-          y: 30, // Move down 30 pixels
-          duration: 0.5,
+      gsap.from(card, {
+        scrollTrigger: {
+          trigger: card,
+          start: "top 80%", // Trigger when card is 80% from the top of the viewport
+          toggleActions: "play none none reverse",
+        },
+        opacity: 0,
+        y: 30, // Move down 30 pixels
+        duration: 0.5,
       });
     });
   </script>
 </section>
-
 
 <!-- Why-Us Section here -->
   <section class="whyus" id="whyus">
