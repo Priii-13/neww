@@ -546,55 +546,124 @@
       <h3 class="heading">UPCOMING EVENTS</h3>
       <div class="heading-underline"></div>
     </div>
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Event Card 1 -->
-      <div class="bg-white mt-5 rounded-lg shadow-lg p-6">
-        <h3 class="text-xl font-semibold mb-2">Spring Fest 2024</h3>
-        <p class="text-gray-700">Date: April 10, 2024</p>
-        <p class="text-gray-700">Location: College Ground</p>
-        <p class="text-gray-700">Description: Join us for a day of fun, games, and performances at our annual Spring Fest! Enjoy live music, food stalls, and various activities.</p>
+    <article data-bs-version="5.1" class="features03" group="Features" mbr-class="{
+      'mbr-fullscreen': fullScreen,
+      'mbr-parallax-background': bg.parallax}">
+    <mbr-parameters>
+      <header>Size</header>
+      <input type="checkbox" title="Full Width" name="fullWidth" checked>
+      <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="6">
+      <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="6">
+      <select title="Columns" name="cardsWidth">
+        <option value="12">1</option>
+        <option value="6">2</option>
+        <option value="4">3</option>
+        <option value="3" selected>4</option>
+      </select>
+      <header>Show/Hide</header>
+      <input type="checkbox" name="showTitle" title="Title" checked>
+      <input type="checkbox" name="showSubtitle" title="Subtitle">
+      <header>Cards</header>
+      <input type="checkbox" name="autoSize" title="Auto Size" checked>
+      <input type="range" name="imageHeight" title="Height" min="1" max="5" step="1" value="4" condition="autoSize"><input type="checkbox" title="Spacing" name="spacing" checked>
+      <input type="checkbox" name="showCardTitle" title="Title" checked>
+      <input type="checkbox" name="showText" title="Text" checked>
+      <input type="checkbox" name="showButtons" title="Buttons" checked>
+      <header>Background</header>
+      <fieldset type="background" parallax name="bg" required>
+        <input type="image" title="Image" value="../_images/background1.jpg">
+        <input type="color" title="Color" value="#ffffff" selected>
+      </fieldset>
+      <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'">
+      <input type="color" title="Overlay Color" name="overlayColor" value="#edefeb" condition="overlay && bg.type == 'image'">
+      <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.6" condition="overlay && bg.type == 'image'">
+    </mbr-parameters>
+    <div class="mbr-overlay" mbr-if="overlay && bg.type !== 'color'"></div>
+    <div mbr-class="{'container': !fullWidth, 'container-fluid': fullWidth}">
+      <div class="row justify-content-center mb-5">
+        <div class="col-12 content-head">
+          <div class="mbr-section-head" mbr-if="showTitle || showSubtitle">
+            <h4 class="mbr-section-title mbr-fonts-style align-center mb-0" mbr-theme-style="display-2" mbr-if="showTitle" data-app-selector=".mbr-section-title">
+              <b>Upcoming Events</b>
+            </h4>
+            <h5 class="mbr-section-subtitle mbr-fonts-style align-center mt-4 mb-0" mbr-theme-style="display-7" mbr-if="showSubtitle" data-app-selector=".mbr-section-subtitle">
+              To add more cards, hover on a card and click 'Add items'
+            </h5>
+          </div>
+        </div>
       </div>
-
-      <!-- Event Card 2 -->
-      <div class="bg-white rounded-lg shadow-lg p-6">
-        <h3 class="text-xl font-semibold mb-2">Guest Lecture: Innovations in Technology</h3>
-        <p class="text-gray-700">Date: October 15, 2024</p>
-        <p class="text-gray-700">Location: Auditorium</p>
-        <p class="text-gray-700">Description: Attend a guest lecture by renowned tech entrepreneur Jane Doe, who will discuss the latest innovations and trends in technology.</p>
-      </div>
-
-      <!-- Event Card 3 -->
-      <div class="bg-white rounded-lg shadow-lg p-6">
-        <h3 class="text-xl font-semibold mb-2">Career Fair 2024</h3>
-        <p class="text-gray-700">Date: June 20, 2024</p>
-        <p class="text-gray-700">Location: Main Hall</p>
-        <p class="text-gray-700">Description: Meet potential employers and explore job opportunities at our annual Career Fair. Bring your resume and be ready to network!</p>
-      </div>
-
-      <!-- Event Card 4 -->
-      <div class="bg-white rounded-lg shadow-lg p-6">
-        <h3 class="text-xl font-semibold mb-2">Summer Bash Extravaganza</h3>
-        <p class="text-gray-700">Date: July 15, 2024</p>
-        <p class="text-gray-700">Location: College Grounds</p>
-        <p class="text-gray-700">Description: Get ready to party like there's no tomorrow! Our Summer Bash is packed with epic activities and unforgettable memories!</p>
-      </div>
-
-      <!-- Event Card 5 -->
-      <div class="bg-white rounded-lg shadow-lg p-6">
-        <h3 class="text-xl font-semibold mb-2">Fall Fiesta Celebration</h3>
-        <p class="text-gray-700">Date: October 20, 2024</p>
-        <p class="text-gray-700">Location: College Grounds</p>
-        <p class="text-gray-700">Description: Celebrate the season with us! Enjoy delicious food, vibrant music, and a whole lot of fun at our Fall Fiesta!</p>
-      </div>
-
-      <!-- Event Card 6 -->
-      <div class="bg-white rounded-lg shadow-lg p-6">
-        <h3 class="text-xl font-semibold mb-2">Winter Wonderland Gala</h3>
-        <p class="text-gray-700">Date: December 15, 2024</p>
-        <p class="text-gray-700">Location: College Auditorium</p>
-        <p class="text-gray-700">Description: Step into a magical evening filled with joy, laughter, and holiday cheer at our Winter Wonderland Gala!</p>
+      <div class="row">
+        <div class="item features-image col-12 col-md-6 col-lg-{{cardsWidth}} active">
+          <div class="item-wrapper">
+            <div class="item-img mb-3">
+              <img src="https://r.mobirisesite.com/892310/assets/images/photo-1652105882148-74eadf081c10.jpeg" alt="Mobirise Website Builder" title="">
+            </div>
+            <div class="item-content align-left" mbr-if="showCardTitle || showCardSubtitle || showText || showButtons">
+              <h5 class="item-title mbr-fonts-style mt-0 mb-2" mbr-theme-style="display-5" data-app-selector=".item-title" mbr-if="showCardTitle">
+                <b>Spring Fest 2024</b>
+              </h5>
+              <p class="mbr-text mbr-fonts-style mb-3" mbr-if="showText" mbr-theme-style="display-7" data-app-selector=".mbr-text, .mbr-section-btn">April 10, 2024</p>
+              <p class="mbr-text mbr-fonts-style mb-3" mbr-if="showText" mbr-theme-style="display-7" data-app-selector=".mbr-text, .mbr-section-btn">Dive into a whirlwind of fun, food, and festivities at our Spring Fest! Live music, games, and laughter await you!</p>
+              <div class="mbr-section-btn item-footer" mbr-if="showButtons" data-toolbar="-mbrBtnMove,-mbrBtnAdd" mbr-buttons="" mbr-theme-style="display-7">
+                <a href="" class="btn item-btn btn-primary" data-app-placeholder="Type Text">Join</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item features-image col-12 col-md-6 col-lg-{{cardsWidth}}">
+          <div class="item-wrapper">
+            <div class="item-img mb-3">
+              <img src="https://r.mobirisesite.com/892310/assets/images/photo-1609039507868-cb46860332ed.jpeg" alt="Mobirise Website Builder" title="" data-slide-to="1" data-bs-slide-to="1" data-bs-slide-to="1">
+            </div>
+            <div class="item-content align-left" mbr-if="showCardTitle || showCardSubtitle || showText || showButtons">
+              <h5 class="item-title mbr-fonts-style mb-2 mt-0" mbr-theme-style="display-5" data-app-selector=".item-title" mbr-if="showCardTitle">
+                <b>Summer Bash Extravaganza</b>
+              </h5>
+              <p class="mbr-text mbr-fonts-style mb-3" mbr-if="showText" mbr-theme-style="display-7" data-app-selector=".mbr-text, .mbr-section-btn">July 15, 2024</p>
+              <p class="mbr-text mbr-fonts-style mb-3" mbr-if="showText" mbr-theme-style="display-7" data-app-selector=".mbr-text, .mbr-section-btn">Get ready to party like there&#x27;s no tomorrow! Our Summer Bash is packed with epic activities and unforgettable memories!</p>
+              <div class="mbr-section-btn item-footer" mbr-if="showButtons" data-toolbar="-mbrBtnMove,-mbrBtnAdd" mbr-buttons="" mbr-theme-style="display-7">
+                <a href="" class="btn item-btn btn-primary" data-app-placeholder="Type Text">Join</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item features-image col-12 col-md-6 col-lg-{{cardsWidth}}">
+          <div class="item-wrapper">
+            <div class="item-img mb-3">
+              <img src="https://r.mobirisesite.com/892310/assets/images/photo-1725610588142-b2b0a03c29d4.jpeg" alt="Mobirise Website Builder" title="" data-slide-to="2" data-bs-slide-to="2" data-bs-slide-to="2">
+            </div>
+            <div class="item-content align-left" mbr-if="showCardTitle || showCardSubtitle || showText || showButtons">
+              <h5 class="item-title mbr-fonts-style mb-2 mt-0" mbr-theme-style="display-5" data-app-selector=".item-title" mbr-if="showCardTitle">
+                <b>Fall Fiesta Celebration</b>
+              </h5>
+              <p class="mbr-text mbr-fonts-style mb-3" mbr-if="showText" mbr-theme-style="display-7" data-app-selector=".mbr-text, .mbr-section-btn">October 20, 2024</p>
+              <p class="mbr-text mbr-fonts-style mb-3" mbr-if="showText" mbr-theme-style="display-7" data-app-selector=".mbr-text, .mbr-section-btn">Celebrate the season with us! Enjoy delicious food, vibrant music, and a whole lot of fun at our Fall Fiesta!</p>
+              <div class="mbr-section-btn item-footer" mbr-if="showButtons" data-toolbar="-mbrBtnMove,-mbrBtnAdd" mbr-buttons="" mbr-theme-style="display-7">
+                <a href="" class="btn item-btn btn-primary" data-app-placeholder="Type Text">Join</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item features-image col-12 col-md-6 col-lg-{{cardsWidth}}">
+          <div class="item-wrapper">
+            <div class="item-img mb-3">
+              <img src="https://r.mobirisesite.com/892310/assets/images/photo-1728535196944-58deb0547cb3.jpeg" alt="Mobirise Website Builder" title="" data-slide-to="2" data-bs-slide-to="2" data-bs-slide-to="2">
+            </div>
+            <div class="item-content align-left" mbr-if="showCardTitle || showCardSubtitle || showText || showButtons">
+              <h5 class="item-title mbr-fonts-style mb-2 mt-0" mbr-theme-style="display-5" data-app-selector=".item-title" mbr-if="showCardTitle">
+                <b>Winter Wonderland Gala</b>
+              </h5>
+              <p class="mbr-text mbr-fonts-style mb-3" mbr-if="showText" mbr-theme-style="display-7" data-app-selector=".mbr-text, .mbr-section-btn">December 15, 2024</p>
+              <p class="mbr-text mbr-fonts-style mb-3" mbr-if="showText" mbr-theme-style="display-7" data-app-selector=".mbr-text, .mbr-section-btn">Step into a magical evening filled with joy, laughter, and holiday cheer at our Winter Wonderland Gala!</p>
+              <div class="mbr-section-btn item-footer" mbr-if="showButtons" data-toolbar="-mbrBtnMove,-mbrBtnAdd" mbr-buttons="" mbr-theme-style="display-7">
+                <a href="" class="btn item-btn btn-primary" data-app-placeholder="Type Text">Join</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+  </article>
 
     <div class="btn-text-center mt-8">
       <a href="events.html" class="col-md-4 col-lg-4 reason font-semibold py-2 px-4 rounded hover:bg-white hover:text-orange-500 transition duration-300">
@@ -602,6 +671,7 @@
       </a>
     </div>
   </div>
+
 
   <script>
     // GSAP animation
