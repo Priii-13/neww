@@ -92,6 +92,11 @@
         $('.navbar-nav a').on('click', function () {
             $('.navbar-collapse').collapse('hide');
         });
+
+        // Optional: Close the navbar when the toggle button is clicked again
+        $('.navbar-toggler').on('click', function () {
+            $('.navbar-collapse').collapse('toggle');
+        });
     });
 </script>
 
