@@ -220,58 +220,6 @@
 
     </header>
     <a href="index.html">Back to Home Page</a>
-    <!-- My Events Display Section -->
-    <div id="my-events-display" class="mt-4" style="display: none;">
-        <h4>My Events</h4>
-        <div id="event-collector">
-            <!-- Events will be loaded here when the link is clicked -->
-        </div>
-    </div>
-    </div>
-    <script>
-    $(document).ready(function () {
-    // Function to load events from localStorage into modal
-    function loadMyEvents() {
-    const events = JSON.parse(localStorage.getItem('events')) || [];
-    $('#event-collector').empty();
-
-    if (events.length === 0) {
-    $('#event-collector').append('<div>No events selected.</div>');
-    } else {
-    events.forEach(function (event) {
-    const eventDetails = `
-    <div class="event-item">
-        <h5>${event.title}</h5>
-        <p><strong>Date:</strong> ${event.date}</p>
-        <p><strong>City:</strong> ${event.city}</p>
-        <p><strong>College:</strong> ${event.college}</p>
-    </div>
-    `;
-    $('#event-collector').append(eventDetails);
-    });
-    }
-    }
-
-    // Show modal when "My Events" is clicked
-    $('#my-events-link').click(function (event) {
-    event.preventDefault();
-    loadMyEvents();
-    $('#myEventsModal').css('display', 'block');
-    });
-
-    // Close modal when "X" is clicked
-    $('.close').click(function () {
-    $('#myEventsModal').css('display', 'none');
-    });
-
-    // Close modal when clicking outside of the modal content
-    $(window).click(function (event) {
-    if (event.target == document.getElementById('myEventsModal')) {
-    $('#myEventsModal').css('display', 'none');
-    }
-    });
-    });
-</script>
     <div class="container">
         <!-- Sidebar with Filters -->
         <aside class="sidebar">
