@@ -542,54 +542,77 @@
 <!-- Events section here -->
 <section class="events" id="events">
   <div class="jumbotron narrow corporate-events" data-aos="fade-up">
-  <div class="col-12 text-center ">
-    <h3 class="heading">UPCOMING EVENTS</h3>
-    <div class="heading-underline "></div>
-  </div>
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="col-12 text-center">
+      <h3 class="heading">UPCOMING EVENTS</h3>
+      <div class="heading-underline"></div>
+    </div>
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <!-- Event Card 1 -->
       <div class="bg-white mt-5 rounded-lg shadow-lg p-6">
-          <h3 class="text-xl font-semibold mb-2">Spring Fest 2024</h3>
-          <p class="text-gray-700">Date:  April 10, 2024</p>
-          <p class="text-gray-700">Location: College Ground</p>
-          <p class="text-gray-700">Description: Join us for a day of fun, games, and performances at our annual Spring Fest! Enjoy live music, food stalls, and various activities.
-          </p>
+        <h3 class="text-xl font-semibold mb-2">Spring Fest 2024</h3>
+        <p class="text-gray-700">Date: April 10, 2024</p>
+        <p class="text-gray-700">Location: College Ground</p>
+        <p class="text-gray-700">Description: Join us for a day of fun, games, and performances at our annual Spring Fest! Enjoy live music, food stalls, and various activities.</p>
       </div>
 
       <!-- Event Card 2 -->
       <div class="bg-white rounded-lg shadow-lg p-6">
-          <h3 class="text-xl font-semibold mb-2">Guest Lecture: Innovations in Technology</h3>
-          <p class="text-gray-700">Date:  October 15, 2024</p>
-          <p class="text-gray-700">Location: Auditorium</p>
-          <p class="text-gray-700">Description: Attend a guest lecture by renowned tech entrepreneur Jane Doe, who will discuss the latest innovations and trends in technology.</p>
+        <h3 class="text-xl font-semibold mb-2">Guest Lecture: Innovations in Technology</h3>
+        <p class="text-gray-700">Date: October 15, 2024</p>
+        <p class="text-gray-700">Location: Auditorium</p>
+        <p class="text-gray-700">Description: Attend a guest lecture by renowned tech entrepreneur Jane Doe, who will discuss the latest innovations and trends in technology.</p>
       </div>
 
       <!-- Event Card 3 -->
       <div class="bg-white rounded-lg shadow-lg p-6">
-          <h3 class="text-xl font-semibold mb-2">Career Fair 2024</h3>
-          <p class="text-gray-700">Date: June 20, 2024</p>
-          <p class="text-gray-700">Location: Main Hall</p>
-          <p class="text-gray-700">Description: Meet potential employers and explore job opportunities at our annual Career Fair. Bring your resume and be ready to network!</p>
+        <h3 class="text-xl font-semibold mb-2">Career Fair 2024</h3>
+        <p class="text-gray-700">Date: June 20, 2024</p>
+        <p class="text-gray-700">Location: Main Hall</p>
+        <p class="text-gray-700">Description: Meet potential employers and explore job opportunities at our annual Career Fair. Bring your resume and be ready to network!</p>
       </div>
-  </div>
 
-  <div class="btn-text-center mt-8">
+      <!-- Event Card 4 -->
+      <div class="bg-white rounded-lg shadow-lg p-6">
+        <h3 class="text-xl font-semibold mb-2">Summer Bash Extravaganza</h3>
+        <p class="text-gray-700">Date: July 15, 2024</p>
+        <p class="text-gray-700">Location: College Grounds</p>
+        <p class="text-gray-700">Description: Get ready to party like there's no tomorrow! Our Summer Bash is packed with epic activities and unforgettable memories!</p>
+      </div>
+
+      <!-- Event Card 5 -->
+      <div class="bg-white rounded-lg shadow-lg p-6">
+        <h3 class="text-xl font-semibold mb-2">Fall Fiesta Celebration</h3>
+        <p class="text-gray-700">Date: October 20, 2024</p>
+        <p class="text-gray-700">Location: College Grounds</p>
+        <p class="text-gray-700">Description: Celebrate the season with us! Enjoy delicious food, vibrant music, and a whole lot of fun at our Fall Fiesta!</p>
+      </div>
+
+      <!-- Event Card 6 -->
+      <div class="bg-white rounded-lg shadow-lg p-6">
+        <h3 class="text-xl font-semibold mb-2">Winter Wonderland Gala</h3>
+        <p class="text-gray-700">Date: December 15, 2024</p>
+        <p class="text-gray-700">Location: College Auditorium</p>
+        <p class="text-gray-700">Description: Step into a magical evening filled with joy, laughter, and holiday cheer at our Winter Wonderland Gala!</p>
+      </div>
+    </div>
+
+    <div class="btn-text-center mt-8">
       <a href="events.html" class="col-md-4 col-lg-4 reason font-semibold py-2 px-4 rounded hover:bg-white hover:text-orange-500 transition duration-300">
-          Explore Other Events
+        Explore Other Events
       </a>
+    </div>
   </div>
-</section>
-  
-<script>
-  // GSAP animation
-  gsap.registerPlugin(ScrollTrigger);
 
-  // Selects all cards
-  const cards = document.querySelectorAll('.card');
+  <script>
+    // GSAP animation
+    gsap.registerPlugin(ScrollTrigger);
 
-  // Animate cards on scroll
-  cards.forEach(card => {
-      gsap.from(card, {
+    // Selects all cards
+    const cards = document.querySelectorAll('.bg-white');
+
+    // Animate cards on scroll
+    cards.forEach(card => {
+ gsap.from(card, {
           scrollTrigger: {
               trigger: card,
               start: "top 80%", // Trigger when card is 80% from the top of the viewport
@@ -599,8 +622,8 @@
           y: 30, // Move down 30 pixels
           duration: 0.5,
       });
-  });
-</script>
+    });
+  </script>
 </section>
 
 <!-- Why-Us Section here -->
