@@ -538,7 +538,7 @@
 
     </div>
   </section>
-
+<!-- Events section here -->
   <section class="events" id="events">
     <div class="jumbotron narrow corporate-events text-white" style="background-color: #eb6e34;" data-aos="fade-up">
       <div class="col-12 text-center">
@@ -638,36 +638,38 @@
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  $(document).ready(function () {
+  $(document).on('click', '.plus-icon', function () {
+    const eventDetails = {
+      title: $(this).data('title'),
+      date: $(this).data('date'),
+      city: $(this).data('city'),
+      college: $(this).data('college')
+    };
 
-  <script>
-    $(document).ready(function () {
-      $(document).on('click', '.plus-icon', function () {
-        const eventDetails = {
-          title: $(this).data('title'),
-          date: $(this).data('date'),
-          city: $(this).data('city'),
-          college: $(this).data('college')
-        };
+    // Log the details to confirm they're loaded
+    console.log("Event Details:", eventDetails);
 
-        // Function to load and display events in My Events tab
-        function loadMyEvents() {
-          const events = JSON.parse(localStorage.getItem('events')) || [];
-          const eventsList = $('#events-list');
-          eventsList.empty(); // Clear the list before adding new items
+    // Check if title exists to avoid null errors
+    if (!eventDetails.title) {
+      console.error("Event title is missing.");
+      return;
+    }
 
-          if (events.length === 0) {
-            eventsList.append('<li>No events added yet.</li>');
-          } else {
-            events.forEach(event => {
-              eventsList.append(`<li>${event.title} - ${event.date} (${event.city}, ${event.college})</li>`);
-            });
-          }
-        }
+    let events = JSON.parse(localStorage.getItem('events')) || [];
+    console.log("Events from localStorage before update:", events);
 
-        // Call loadMyEvents when the page loads
-        loadMyEvents();
-      });
-  </script>
+    if (!events.some(event => event.title === eventDetails.title && event.date === eventDetails.date)) {
+      events.push(eventDetails);
+      localStorage.setItem('events', JSON.stringify(events));
+      alert(eventDetails.title + ' has been successfully added and will be visible in My Events tab of Explore Events!');
+    } else {
+      alert(eventDetails.title + ' is already in your events.');
+    }
+  });
+});
+</script>
 
   <script>
     // GSAP animation
